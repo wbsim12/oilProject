@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>401</width>
+    <height>835</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>5480</width>
+     <height>844</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>메뉴</string>
+    </attribute>
+    <widget class="QLabel" name="ame_label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>141</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ame">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>181</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>
+
+
+
+
+
+
+
+아메리카노</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="latte">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>20</y>
+       <width>181</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>
+
+
+
+
+
+
+
+카페라떼</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="mocha">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>200</y>
+       <width>181</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>
+
+
+
+
+
+
+
+카페모카</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="macchi">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>200</y>
+       <width>181</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>
+
+
+
+
+
+
+
+카라멜 마끼아또</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="hamegg">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>380</y>
+       <width>181</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>
+
+
+
+
+
+
+
+햄에그 샌드위치</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="hotsand">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>380</y>
+       <width>181</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>
+
+
+
+
+
+
+
+핫치킨 샌드위치</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="latte_label">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>40</y>
+       <width>141</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mocha_label">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>220</y>
+       <width>141</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="macchi_label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>220</y>
+       <width>141</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="hotsand_label">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>400</y>
+       <width>141</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="hamegg_label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>400</y>
+       <width>141</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>170</y>
+       <width>56</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>2000원</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>170</y>
+       <width>56</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>4000원</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>350</y>
+       <width>56</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>4500원</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>350</y>
+       <width>56</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>3000원</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>530</y>
+       <width>56</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>4900원</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>530</y>
+       <width>56</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>5500원</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="menu_label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>600</y>
+       <width>101</width>
+       <height>160</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="amount_label">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>600</y>
+       <width>61</width>
+       <height>160</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="price_label">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>600</y>
+       <width>71</width>
+       <height>160</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sum_label">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>600</y>
+       <width>81</width>
+       <height>160</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="all_label">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>770</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="menu_label_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>560</y>
+       <width>391</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>     메뉴                 수량                  가격                         총 가격</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pay_button">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>770</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>주문하기</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="all_cancel">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>770</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>취소하기</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="all_label_2">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>770</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>최종 가격</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <zorder>ame</zorder>
+    <zorder>ame_label</zorder>
+    <zorder>latte</zorder>
+    <zorder>mocha</zorder>
+    <zorder>macchi</zorder>
+    <zorder>hamegg</zorder>
+    <zorder>hotsand</zorder>
+    <zorder>latte_label</zorder>
+    <zorder>mocha_label</zorder>
+    <zorder>macchi_label</zorder>
+    <zorder>hotsand_label</zorder>
+    <zorder>hamegg_label</zorder>
+    <zorder>label</zorder>
+    <zorder>label_8</zorder>
+    <zorder>label_9</zorder>
+    <zorder>label_10</zorder>
+    <zorder>label_11</zorder>
+    <zorder>label_12</zorder>
+    <zorder>menu_label</zorder>
+    <zorder>amount_label</zorder>
+    <zorder>price_label</zorder>
+    <zorder>sum_label</zorder>
+    <zorder>all_label</zorder>
+    <zorder>menu_label_2</zorder>
+    <zorder>pay_button</zorder>
+    <zorder>all_cancel</zorder>
+    <zorder>all_label_2</zorder>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>주문</string>
+    </attribute>
+    <widget class="QLabel" name="price_label_1">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>50</y>
+       <width>71</width>
+       <height>160</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="menu_label_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>391</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>     메뉴                 수량                  가격                         총 가격</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="all_label_1">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>220</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="menu_label_1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>101</width>
+       <height>160</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="amount_label_1">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>50</y>
+       <width>61</width>
+       <height>160</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sum_label_1">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>50</y>
+       <width>81</width>
+       <height>160</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="all_label_3">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>220</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>최종 가격</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>270</y>
+       <width>171</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>결제하기</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>270</y>
+       <width>171</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>취소하기</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>주문완료</string>
+    </attribute>
+    <widget class="QLabel" name="complete">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>10</y>
+       <width>221</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>주문완료!</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="menu_label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>170</y>
+       <width>101</width>
+       <height>160</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="price_label_2">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>170</y>
+       <width>71</width>
+       <height>160</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sum_label_2">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>170</y>
+       <width>81</width>
+       <height>160</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="menu_label_5">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>130</y>
+       <width>391</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>     메뉴                 수량                  가격                         총 가격</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="all_label_4">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>340</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>최종 가격</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="amount_label_2">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>170</y>
+       <width>61</width>
+       <height>160</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="all_label_5">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>340</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="complete_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>80</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>대기번호 :</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="complete_3">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>80</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="complete_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>440</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>주문일시 :</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="all_label_6">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>400</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>거스 름돈</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="change_label">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>400</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="date_label">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>440</y>
+       <width>271</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="main_button">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>510</y>
+       <width>150</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>메뉴 화면으로
+돌아가기</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="all_label_7">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>370</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>결제 금액</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="pay_label">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>370</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
