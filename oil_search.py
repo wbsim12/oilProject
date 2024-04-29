@@ -10,7 +10,6 @@ root = os.path.dirname(os.path.abspath(__file__))
 MainUI = uic.loadUiType(os.path.join(root, 'testMain.ui'))[0]
 
 
-
 class MainDialog(QMainWindow, MainUI):
 
     def __init__(self):
@@ -20,24 +19,29 @@ class MainDialog(QMainWindow, MainUI):
         self.label.setGeometry(0, 0, 640, 480)
         #self.address_to_coords()
         self.lineEdit.setPlaceholderText('검색 장소 입력 체크')
-        check_test = self.address_to_coords()
+        map_image = self.lineEdit.returnPressed.connect(self.address_get_text)
 
+        #print(test_text)
+        #check_test = self.address_to_coords()
 
-        map_image = self.get_static_map(check_test[0], check_test[1])
+        #map_image = self.get_static_map(check_test[0], check_test[1])
 
-        pixmap = QPixmap()
-        pixmap.loadFromData(map_image)
-        self.label.setPixmap(pixmap)
+        # pixmap = QPixmap()
+        # pixmap.loadFromData(map_image)
+        # self.label.setPixmap(pixmap)
         # 예시 주소로 좌표 변환
         #address = "경기도 성남시 분당구 삼평동 681"
 
-        print(check_test, type(check_test))
-        print(check_test[0])
-        print(check_test[1])
+        # print(check_test, type(check_test))
+        # print(check_test[0])
+        # print(check_test[1])
 
+    def address_get_text(self):
+        #return self.lineEdit.text()
+        self.address_to_coords(self.lineEdit.text())
 
-    def address_to_coords(self):
-        address = "경기도 성남시 분당구 삼평동 681"
+    def address_to_coords(self, address):
+        #address = "경기도 성남시 분당구 삼평동 681"
         base_url = "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode"
         client_id = "7ddepf4bxh"
         client_secret = "QhXyiYlQ5OxeLV7Oar0CH6UptIOtaqN7RH8cps2y"
@@ -59,15 +63,14 @@ class MainDialog(QMainWindow, MainUI):
                 coords = data['addresses'][0]['x'], data['addresses'][0]['y']
                 print("x 내용 확인" + data['addresses'][0]['x'])
                 print("y 내용 확인" + data['addresses'][0]['y'])
-                return coords
+                #return coords
+                self.get_static_map(coords[0], coords[1])
             else:
                 print("Error:", data['status'])
                 return None
         else:
             print("Error:", response.status_code)
             return None
-
-
 
     def get_static_map(self, lon, lat):
 
@@ -93,13 +96,14 @@ class MainDialog(QMainWindow, MainUI):
         response = requests.get(base_url, params=params, headers=headers)
 
         if response.status_code == 200:
-            return response.content
+            map_image = response.content
+            #return response.content
+            pixmap = QPixmap()
+            pixmap.loadFromData(map_image)
+            self.label.setPixmap(pixmap)
         else:
             print("Error:", response.status_code)
             return None
-
-
-
 
 
 if __name__ == '__main__':
