@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>652</width>
-    <height>739</height>
+    <width>589</width>
+    <height>595</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>50</y>
+      <x>0</x>
+      <y>0</y>
       <width>591</width>
-      <height>611</height>
+      <height>571</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -34,9 +34,9 @@
       <property name="geometry">
        <rect>
         <x>440</x>
-        <y>530</y>
+        <y>510</y>
         <width>121</width>
-        <height>31</height>
+        <height>28</height>
        </rect>
       </property>
       <property name="text">
@@ -46,11 +46,14 @@
      <widget class="QPushButton" name="relv_btn">
       <property name="geometry">
        <rect>
-        <x>380</x>
-        <y>310</y>
-        <width>93</width>
+        <x>430</x>
+        <y>300</y>
+        <width>65</width>
         <height>28</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>관련도순</string>
@@ -59,9 +62,9 @@
      <widget class="QPushButton" name="latest_btn">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>310</y>
-        <width>93</width>
+        <x>500</x>
+        <y>300</y>
+        <width>65</width>
         <height>28</height>
        </rect>
       </property>
@@ -73,9 +76,9 @@
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>340</y>
+        <y>330</y>
         <width>541</width>
-        <height>181</height>
+        <height>171</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -86,15 +89,15 @@ color: rgb(64, 94, 150);</string>
        <enum>QFrame::Box</enum>
       </property>
       <property name="text">
-       <string>뉴스 제목들</string>
+       <string>뉴스 제목</string>
       </property>
      </widget>
      <widget class="QPushButton" name="oil_price_btn">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>110</y>
-        <width>191</width>
+        <x>205</x>
+        <y>100</y>
+        <width>170</width>
         <height>131</height>
        </rect>
       </property>
@@ -103,7 +106,7 @@ color: rgb(64, 94, 150);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>find.png</normaloff>find.png</iconset>
+        <normaloff>../img/find.png</normaloff>../img/find.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -116,8 +119,8 @@ color: rgb(64, 94, 150);</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>110</y>
-        <width>171</width>
+        <y>100</y>
+        <width>170</width>
         <height>131</height>
        </rect>
       </property>
@@ -126,7 +129,7 @@ color: rgb(64, 94, 150);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>gas_.png</normaloff>gas_.png</iconset>
+        <normaloff>../img/gas_.png</normaloff>../img/gas_.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -138,9 +141,9 @@ color: rgb(64, 94, 150);</string>
      <widget class="QPushButton" name="cheapest_btn">
       <property name="geometry">
        <rect>
-        <x>410</x>
-        <y>110</y>
-        <width>161</width>
+        <x>385</x>
+        <y>100</y>
+        <width>170</width>
         <height>131</height>
        </rect>
       </property>
@@ -149,7 +152,7 @@ color: rgb(64, 94, 150);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>map.png</normaloff>map.png</iconset>
+        <normaloff>../img/map.png</normaloff>../img/map.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -163,8 +166,8 @@ color: rgb(64, 94, 150);</string>
        <rect>
         <x>20</x>
         <y>40</y>
-        <width>211</width>
-        <height>51</height>
+        <width>251</width>
+        <height>28</height>
        </rect>
       </property>
       <property name="text">
@@ -174,13 +177,13 @@ color: rgb(64, 94, 150);</string>
        <string>검색지역을 입력해주세요.</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="search_btn">
       <property name="geometry">
        <rect>
-        <x>240</x>
+        <x>280</x>
         <y>40</y>
         <width>81</width>
-        <height>51</height>
+        <height>28</height>
        </rect>
       </property>
       <property name="text">
@@ -206,7 +209,7 @@ color: rgb(64, 94, 150);</string>
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>200</x>
         <y>240</y>
         <width>171</width>
         <height>21</height>
@@ -222,7 +225,7 @@ color: rgb(64, 94, 150);</string>
      <widget class="QLabel" name="label_6">
       <property name="geometry">
        <rect>
-        <x>410</x>
+        <x>380</x>
         <y>240</y>
         <width>171</width>
         <height>21</height>
@@ -231,11 +234,14 @@ color: rgb(64, 94, 150);</string>
       <property name="text">
        <string>현재 위치 최저가 주유소</string>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="label_7">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>200</x>
         <y>260</y>
         <width>171</width>
         <height>21</height>
@@ -281,7 +287,7 @@ color: rgb(64, 94, 150);</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>320</y>
+        <y>310</y>
         <width>161</width>
         <height>16</height>
        </rect>
@@ -293,11 +299,14 @@ color: rgb(64, 94, 150);</string>
      <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
-        <x>330</x>
-        <y>40</y>
-        <width>241</width>
-        <height>51</height>
+        <x>390</x>
+        <y>20</y>
+        <width>161</width>
+        <height>60</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
       <property name="frameShape">
        <enum>QFrame::Box</enum>
@@ -314,7 +323,7 @@ color: rgb(64, 94, 150);</string>
      <attribute name="title">
       <string>지도</string>
      </attribute>
-     <widget class="QWebEngineView" name="webEngineView">
+     <widget class="QWebEngineView" name="web_view">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -327,19 +336,6 @@ color: rgb(64, 94, 150);</string>
        <url>
         <string>about:blank</string>
        </url>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>170</y>
-        <width>221</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>주유소 찾기 지도 출력 </string>
       </property>
      </widget>
     </widget>
@@ -376,29 +372,20 @@ color: rgb(64, 94, 150);</string>
      <attribute name="title">
       <string>그래프2</string>
      </attribute>
-     <widget class="QLabel" name="label_4">
+     <widget class="QWebEngineView" name="web_price_view">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>191</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>현재유가비교</string>
-      </property>
-     </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_3">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
+        <x>30</x>
         <y>30</y>
-        <width>601</width>
-        <height>601</height>
+        <width>521</width>
+        <height>511</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_3"/>
+      <property name="url">
+       <url>
+        <string>about:blank</string>
+       </url>
+      </property>
      </widget>
     </widget>
    </widget>
@@ -408,7 +395,7 @@ color: rgb(64, 94, 150);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>652</width>
+     <width>589</width>
      <height>21</height>
     </rect>
    </property>
