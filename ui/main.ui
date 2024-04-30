@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>589</width>
-    <height>595</height>
+    <height>632</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <x>0</x>
       <y>0</y>
       <width>591</width>
-      <height>571</height>
+      <height>611</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -34,7 +34,7 @@
       <property name="geometry">
        <rect>
         <x>440</x>
-        <y>510</y>
+        <y>540</y>
         <width>121</width>
         <height>28</height>
        </rect>
@@ -47,7 +47,7 @@
       <property name="geometry">
        <rect>
         <x>430</x>
-        <y>300</y>
+        <y>330</y>
         <width>65</width>
         <height>28</height>
        </rect>
@@ -63,7 +63,7 @@
       <property name="geometry">
        <rect>
         <x>500</x>
-        <y>300</y>
+        <y>330</y>
         <width>65</width>
         <height>28</height>
        </rect>
@@ -76,7 +76,7 @@
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>330</y>
+        <y>360</y>
         <width>541</width>
         <height>171</height>
        </rect>
@@ -95,8 +95,8 @@ color: rgb(64, 94, 150);</string>
      <widget class="QPushButton" name="oil_price_btn">
       <property name="geometry">
        <rect>
-        <x>205</x>
-        <y>100</y>
+        <x>210</x>
+        <y>140</y>
         <width>170</width>
         <height>131</height>
        </rect>
@@ -119,7 +119,7 @@ color: rgb(64, 94, 150);</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>100</y>
+        <y>140</y>
         <width>170</width>
         <height>131</height>
        </rect>
@@ -141,8 +141,8 @@ color: rgb(64, 94, 150);</string>
      <widget class="QPushButton" name="cheapest_btn">
       <property name="geometry">
        <rect>
-        <x>385</x>
-        <y>100</y>
+        <x>400</x>
+        <y>140</y>
         <width>170</width>
         <height>131</height>
        </rect>
@@ -164,9 +164,9 @@ color: rgb(64, 94, 150);</string>
      <widget class="QLineEdit" name="lineEdit">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>40</y>
-        <width>251</width>
+        <x>210</x>
+        <y>100</y>
+        <width>311</width>
         <height>28</height>
        </rect>
       </property>
@@ -174,15 +174,15 @@ color: rgb(64, 94, 150);</string>
        <string/>
       </property>
       <property name="placeholderText">
-       <string>검색지역을 입력해주세요.</string>
+       <string>최저가 주유소 찾기</string>
       </property>
      </widget>
      <widget class="QPushButton" name="search_btn">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>40</y>
-        <width>81</width>
+        <x>520</x>
+        <y>100</y>
+        <width>50</width>
         <height>28</height>
        </rect>
       </property>
@@ -194,7 +194,7 @@ color: rgb(64, 94, 150);</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>240</y>
+        <y>280</y>
         <width>171</width>
         <height>21</height>
        </rect>
@@ -209,8 +209,8 @@ color: rgb(64, 94, 150);</string>
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>240</y>
+        <x>210</x>
+        <y>280</y>
         <width>171</width>
         <height>21</height>
        </rect>
@@ -225,8 +225,8 @@ color: rgb(64, 94, 150);</string>
      <widget class="QLabel" name="label_6">
       <property name="geometry">
        <rect>
-        <x>380</x>
-        <y>240</y>
+        <x>400</x>
+        <y>280</y>
         <width>171</width>
         <height>21</height>
        </rect>
@@ -241,8 +241,8 @@ color: rgb(64, 94, 150);</string>
      <widget class="QLabel" name="label_7">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>260</y>
+        <x>210</x>
+        <y>300</y>
         <width>171</width>
         <height>21</height>
        </rect>
@@ -258,7 +258,7 @@ color: rgb(64, 94, 150);</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>260</y>
+        <y>300</y>
         <width>171</width>
         <height>21</height>
        </rect>
@@ -270,24 +270,11 @@ color: rgb(64, 94, 150);</string>
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_9">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>20</y>
-        <width>161</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>최저가 주유소 찾기</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>310</y>
+        <y>340</y>
         <width>161</width>
         <height>16</height>
        </rect>
@@ -299,9 +286,9 @@ color: rgb(64, 94, 150);</string>
      <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
-        <x>390</x>
+        <x>400</x>
         <y>20</y>
-        <width>161</width>
+        <width>170</width>
         <height>60</height>
        </rect>
       </property>
@@ -313,6 +300,51 @@ color: rgb(64, 94, 150);</string>
       </property>
       <property name="text">
        <string>현재 유가 가격</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>20</y>
+        <width>170</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string>현재 유가 가격</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>151</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>24</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>OIL LAB</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
