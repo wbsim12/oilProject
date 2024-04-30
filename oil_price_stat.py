@@ -88,7 +88,7 @@ class OilStatPage(QMainWindow, stat_UI):
             # options.add_argument('--headless')
             # options.add_argument('--no-sandbox')
             # options.add_argument('--disable-dev-shm-usage')
-            # self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+            # self.driver = webdriver.Chrome(options=options)
             # self.initiate_chrome_driver()
 
             fig = Figure(figsize=(5, 4), dpi=100)
