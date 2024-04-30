@@ -21,6 +21,7 @@ class MainWindow(QMainWindow):
         self.plot_button = QPushButton('휘발유 및 경유 평균 가격 조회')
         self.plot_button.clicked.connect(self.show_prices)
 
+
         # 중앙 위젯 및 레이아웃 생성
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
@@ -37,7 +38,7 @@ class MainWindow(QMainWindow):
         gasoline_whole_price = json_data['RESULT']['OIL'][30]['PRICE']
         diesel_whole_price = json_data['RESULT']['OIL'][33]['PRICE']
 
-        self.plot_button.setText("전국 휘발유 평균 가격: {:.2f}원, 전국 경유 평균 가격: {:.2f}원".format(gasoline_whole_price, diesel_whole_price))
+        self.plot_button.setText("전국 휘발유 평균 가격: {:.2f}원\n  전국 경   유 평균 가격: {:.2f}원  ".format(gasoline_whole_price, diesel_whole_price))
 
 
 def main():
