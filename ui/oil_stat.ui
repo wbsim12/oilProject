@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1026</width>
-    <height>593</height>
+    <width>1092</width>
+    <height>616</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <x>10</x>
      <y>70</y>
      <width>811</width>
-     <height>511</height>
+     <height>531</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="Graph"/>
@@ -28,8 +28,8 @@
    <property name="geometry">
     <rect>
      <x>930</x>
-     <y>80</y>
-     <width>81</width>
+     <y>70</y>
+     <width>151</width>
      <height>22</height>
     </rect>
    </property>
@@ -48,7 +48,7 @@
    <property name="geometry">
     <rect>
      <x>843</x>
-     <y>82</y>
+     <y>72</y>
      <width>71</width>
      <height>20</height>
     </rect>
@@ -61,7 +61,7 @@
    <property name="geometry">
     <rect>
      <x>843</x>
-     <y>112</y>
+     <y>102</y>
      <width>71</width>
      <height>20</height>
     </rect>
@@ -74,11 +74,16 @@
    <property name="geometry">
     <rect>
      <x>930</x>
-     <y>110</y>
-     <width>81</width>
+     <y>100</y>
+     <width>151</width>
      <height>22</height>
     </rect>
    </property>
+   <item>
+    <property name="text">
+     <string>셀프/비셀프 비교</string>
+    </property>
+   </item>
    <item>
     <property name="text">
      <string>셀프</string>
@@ -93,9 +98,9 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>940</x>
-     <y>140</y>
-     <width>75</width>
+     <x>974</x>
+     <y>130</y>
+     <width>101</width>
      <height>41</height>
     </rect>
    </property>
@@ -103,13 +108,170 @@
     <string>확인</string>
    </property>
   </widget>
-  <widget class="QLabel" name="explanation">
+  <widget class="QWidget" name="verticalLayoutWidget_2">
    <property name="geometry">
     <rect>
      <x>830</x>
-     <y>200</y>
-     <width>181</width>
-     <height>381</height>
+     <y>180</y>
+     <width>131</width>
+     <height>392</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QCheckBox" name="checkBox_1">
+      <property name="text">
+       <string>전국</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_2">
+      <property name="text">
+       <string>서울</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_3">
+      <property name="text">
+       <string>부산</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_4">
+      <property name="text">
+       <string>대구</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_5">
+      <property name="text">
+       <string>인천</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_6">
+      <property name="text">
+       <string>광주</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_7">
+      <property name="text">
+       <string>대전</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_8">
+      <property name="text">
+       <string>울산</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_9">
+      <property name="text">
+       <string>경기</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_10">
+      <property name="text">
+       <string>강원</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_11">
+      <property name="text">
+       <string>충북</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_12">
+      <property name="text">
+       <string>충남</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_13">
+      <property name="text">
+       <string>전북</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_14">
+      <property name="text">
+       <string>전남</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_15">
+      <property name="text">
+       <string>경북</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_16">
+      <property name="text">
+       <string>경남</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_17">
+      <property name="text">
+       <string>제주</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_18">
+      <property name="text">
+       <string>세종</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>970</x>
+     <y>180</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QPushButton" name="unselect_all">
+      <property name="text">
+       <string>모두 해제</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="explanation">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>40</y>
+     <width>241</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
