@@ -14,18 +14,23 @@ from selenium.webdriver.common.by import By
 
 from PyQt5.QtWidgets import QMainWindow, QApplication, QDialog, QMessageBox, QPushButton, QVBoxLayout, QLabel, QTextEdit
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import Qt, QTimer
+from PyQt5.QtCore import Qt, QTimer, QUrl
+
+from avg_recent_price import avg_price
+from kakao_map_test import kakao_map_set
+
+#import kakao_map_test
 
 root = os.path.dirname(os.path.abspath(__file__))
 # ui만든 파일의 경로
-MainUI = uic.loadUiType(os.path.join(root, 'main.ui'))[0]
-driver = webdriver.Chrome()
-
+MainUI = uic.loadUiType(os.path.join(root, 'ui/main.ui'))[0]
 options = webdriver.ChromeOptions()
-options.add_argument('--headless') # 창이 나타나지 않도록 headless
+options.add_argument('--headless')  # 창이 나타나지 않도록 headless
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
+driver = webdriver.Chrome(options=options)
 #driver = webdriver.Chrome('chromedriver', options=options)
+
 
 class MainDialog(QMainWindow, MainUI):
     def __init__(self):
@@ -34,19 +39,51 @@ class MainDialog(QMainWindow, MainUI):
             self.cnt = 0
             self.setupUi(self)
             self.set_driver()
+            self.apply_stylesheet("html/style.css")  # CSS 파일 적용
+            self.latest_btn.setStyleSheet('background:#f7f7f7; color: black;')
+            self.relv_btn.setStyleSheet('background:#f7f7f7; color: black;')
+            self.show_news_label.setStyleSheet('font-size: 15px;')
             self.get_latest_news()
             self.relv_btn.clicked.connect(self.get_relevance_news)
             self.latest_btn.clicked.connect(self.get_latest_news)
             self.scrab_btn.clicked.connect(self.scrap_news)
-            self.apply_stylesheet("html/style.css")  # CSS 파일 적용
-            self.scrap_box = []
 
+
+            self.scrap_box = []
+            self.cheapest_btn.clicked.connect(self.move_page)
+            self.oil_price_btn.clicked.connect(self.oil_price_page)
 
         except Exception as e:
             print(e)
             print(traceback.format_exc())
 
 
+
+
+    def oil_price_page(self):
+        try:
+            fig = avg_price.plot_graph(self)
+            plot_html = fig.to_html(full_html=False, include_plotlyjs='cdn')
+            self.web_price_view.setHtml(plot_html)
+            self.tabWidget.setCurrentIndex(3)
+        except Exception as e:
+            print(e)
+            print(traceback.format_exc())
+
+
+    def move_page(self):
+        try:
+            km = kakao_map_set
+
+            url = km.set_url(self)
+            print(url)
+            self.web_view.load(QUrl(url))
+            self.tabWidget.setCurrentIndex(1)
+        except Exception as e:
+            print(e)
+            print(traceback.format_exc())
+
+        #kakao_map_test().
 
     def apply_stylesheet(self, file_path): #css파일 적용
         try:
@@ -59,14 +96,14 @@ class MainDialog(QMainWindow, MainUI):
         try:
             url = "https://search.naver.com/search.naver?ssc=tab.news.all&where=news&sm=tab_jum&query=%EC%9C%A0%EA%B0%80"  # url 설정
             driver.get(url)
-            #print("페이지 타이틀:", driver.title)
+            print("페이지 타이틀:", driver.title)
         except Exception as e:
             print("오류 발생:", e)
 
     def get_latest_news(self):  # 최신순 뉴스'
         self.scrap_box = [{'Title': None, 'Url': None}]
-        self.latest_btn.setStyleSheet('background:#405E96')
-        self.relv_btn.setStyleSheet('background:#6D85B7')
+        self.latest_btn.setStyleSheet('font-weight: bold; background-color : #f7f7f7;color : black')
+        self.relv_btn.setStyleSheet('font-weight: normal; background-color : #f7f7f7;color : black')
         self.scrab_btn.setText('전체 뉴스 스크랩')
         self.scrab_btn.setStyleSheet('background-color:#405E96')
         title = ''
@@ -86,8 +123,8 @@ class MainDialog(QMainWindow, MainUI):
     def get_relevance_news(self): #관련도순 뉴스'
         try:
             self.scrap_box = [{'Title': None, 'Url': None}]
-            self.relv_btn.setStyleSheet('background:#405E96')
-            self.latest_btn.setStyleSheet('background:#6D85B7')
+            self.relv_btn.setStyleSheet('font-weight: bold; background-color : #f7f7f7;color : black')
+            self.latest_btn.setStyleSheet('font-weight: normal; background-color : #f7f7f7;color : black')
             self.scrab_btn.setText('전체 뉴스 스크랩')
             self.scrab_btn.setStyleSheet('background-color:#405E96')
             title=''
