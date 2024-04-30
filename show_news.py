@@ -38,7 +38,7 @@ class MainDialog(QMainWindow, MainUI):
             self.relv_btn.clicked.connect(self.get_relevance_news)
             self.latest_btn.clicked.connect(self.get_latest_news)
             self.scrab_btn.clicked.connect(self.scrap_news)
-            self.apply_stylesheet("style.css")  # CSS 파일 적용
+            self.apply_stylesheet("html/style.css")  # CSS 파일 적용
             self.scrap_box = []
 
 
