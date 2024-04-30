@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1011</width>
-    <height>602</height>
+    <width>1026</width>
+    <height>593</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,63 +17,103 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>10</y>
-     <width>841</width>
-     <height>571</height>
+     <y>70</y>
+     <width>811</width>
+     <height>511</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="Graph1"/>
+   <layout class="QVBoxLayout" name="Graph"/>
   </widget>
-  <widget class="QCheckBox" name="self">
+  <widget class="QComboBox" name="oil_combo">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>60</y>
-     <width>121</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>비셀프</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="non_self">
-   <property name="geometry">
-    <rect>
-     <x>870</x>
+     <x>930</x>
      <y>80</y>
-     <width>121</width>
-     <height>31</height>
+     <width>81</width>
+     <height>22</height>
     </rect>
    </property>
-   <property name="text">
-    <string>셀프</string>
-   </property>
+   <item>
+    <property name="text">
+     <string>휘발유</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>경유</string>
+    </property>
+   </item>
   </widget>
-  <widget class="QCheckBox" name="gasoline">
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>100</y>
-     <width>121</width>
-     <height>31</height>
+     <x>843</x>
+     <y>82</y>
+     <width>71</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>경유</string>
+    <string>기름 종류</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="patrolium">
+  <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>120</y>
-     <width>121</width>
-     <height>31</height>
+     <x>843</x>
+     <y>112</y>
+     <width>71</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>휘발유</string>
+    <string>셀프/비셀프</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="self_combo">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>110</y>
+     <width>81</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>셀프</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>비셀프</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>140</y>
+     <width>75</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>확인</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="explanation">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>200</y>
+     <width>181</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>
