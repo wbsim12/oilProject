@@ -59,17 +59,17 @@ class MainDialog(QMainWindow, MainUI):
             self.scrap_box = []
             self.cheapest_btn.clicked.connect(self.move_page)
             self.oil_price_btn.clicked.connect(self.oil_price_page)
-            self.price_chart = StatPageUI()
-            self.tabWidget.insertTab(2, self.price_chart, "Price Chart")
-            self.self_btn.clicked.connect(lambda: self.tabWidget.setCurrentIndex(2))
             self.main_cover_btn_1.clicked.connect(self.get_main)
             self.main_cover_btn_2.clicked.connect(self.get_main)
             self.main_cover_btn_3.clicked.connect(self.get_main)
 
-
-            self.price_chart = StatPageUI()
-            self.tabWidget.insertTab(2, self.price_chart, "Price Chart")
-            self.self_btn.clicked.connect(lambda: self.tabWidget.setCurrentIndex(2))
+            try:
+                self.price_chart = StatPageUI()
+                self.graphLayout.addWidget(self.price_chart)
+                self.self_btn.clicked.connect(lambda: self.tabWidget.setCurrentIndex(2))
+            except Exception as e:
+                print(e)
+                print(traceback.format_exc())
 
         except Exception as e:
             print(e)

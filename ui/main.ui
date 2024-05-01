@@ -514,7 +514,7 @@ background-color: rgb(64, 94, 150);</string>
      <attribute name="title">
       <string>지도</string>
      </attribute>
-     <widget class="QWebEngineView" name="web_view" native="true">
+     <widget class="QWebEngineView" name="web_view">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -523,7 +523,7 @@ background-color: rgb(64, 94, 150);</string>
         <height>561</height>
        </rect>
       </property>
-      <property name="url" stdset="0">
+      <property name="url">
        <url>
         <string>about:blank</string>
        </url>
@@ -636,265 +636,6 @@ color: rgb(0, 0, 0);</string>
      <attribute name="title">
       <string>그래프1</string>
      </attribute>
-     <widget class="QWidget" name="verticalLayoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>60</y>
-        <width>571</width>
-        <height>411</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="Graph"/>
-     </widget>
-     <widget class="QComboBox" name="self_combo">
-      <property name="geometry">
-       <rect>
-        <x>426</x>
-        <y>510</y>
-        <width>151</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>셀프/비셀프 비교</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>셀프</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>비셀프</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLabel" name="explanation">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>480</y>
-        <width>241</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label">
-      <property name="geometry">
-       <rect>
-        <x>339</x>
-        <y>482</y>
-        <width>71</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>기름 종류</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="oil_combo">
-      <property name="geometry">
-       <rect>
-        <x>426</x>
-        <y>480</y>
-        <width>151</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>휘발유</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>경유</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QPushButton" name="pushButton">
-      <property name="geometry">
-       <rect>
-        <x>480</x>
-        <y>540</y>
-        <width>101</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>확인</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_3">
-      <property name="geometry">
-       <rect>
-        <x>339</x>
-        <y>512</y>
-        <width>71</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>셀프/비셀프</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="unselect_all">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>540</y>
-        <width>109</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>모두 해제</string>
-      </property>
-     </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_2">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>70</y>
-        <width>131</width>
-        <height>463</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QCheckBox" name="checkBox_1">
-         <property name="text">
-          <string>전국</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_2">
-         <property name="text">
-          <string>서울</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_3">
-         <property name="text">
-          <string>부산</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_4">
-         <property name="text">
-          <string>대구</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_5">
-         <property name="text">
-          <string>인천</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_6">
-         <property name="text">
-          <string>광주</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_7">
-         <property name="text">
-          <string>대전</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_8">
-         <property name="text">
-          <string>울산</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_9">
-         <property name="text">
-          <string>경기</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_10">
-         <property name="text">
-          <string>강원</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_11">
-         <property name="text">
-          <string>충북</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_12">
-         <property name="text">
-          <string>충남</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_13">
-         <property name="text">
-          <string>전북</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_14">
-         <property name="text">
-          <string>전남</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_15">
-         <property name="text">
-          <string>경북</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_16">
-         <property name="text">
-          <string>경남</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_17">
-         <property name="text">
-          <string>제주</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_18">
-         <property name="text">
-          <string>세종</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
      <widget class="QPushButton" name="logo1_btn2">
       <property name="geometry">
        <rect>
@@ -965,24 +706,27 @@ color: rgb(0, 0, 0);</string>
        <string/>
       </property>
      </widget>
-     <zorder>verticalLayoutWidget</zorder>
-     <zorder>self_combo</zorder>
-     <zorder>explanation</zorder>
-     <zorder>label</zorder>
-     <zorder>oil_combo</zorder>
-     <zorder>pushButton</zorder>
-     <zorder>label_3</zorder>
-     <zorder>unselect_all</zorder>
-     <zorder>verticalLayoutWidget_2</zorder>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>70</y>
+        <width>581</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="graphLayout"/>
+     </widget>
      <zorder>main_cover_btn_2</zorder>
      <zorder>label_15</zorder>
      <zorder>logo1_btn2</zorder>
+     <zorder>verticalLayoutWidget</zorder>
     </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
       <string>그래프2</string>
      </attribute>
-     <widget class="QWebEngineView" name="web_price_view" native="true">
+     <widget class="QWebEngineView" name="web_price_view">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -991,7 +735,7 @@ color: rgb(0, 0, 0);</string>
         <height>511</height>
        </rect>
       </property>
-      <property name="url" stdset="0">
+      <property name="url">
        <url>
         <string>about:blank</string>
        </url>
@@ -1085,7 +829,7 @@ color: rgb(0, 0, 0);</string>
      <x>0</x>
      <y>0</y>
      <width>587</width>
-     <height>24</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
