@@ -20,6 +20,7 @@ from avg_recent_price import avg_price
 from kakao_map_test import kakao_map_set
 
 #import kakao_map_test
+from oil_price_stat import *
 
 root = os.path.dirname(os.path.abspath(__file__))
 # ui만든 파일의 경로
@@ -29,7 +30,6 @@ options.add_argument('--headless')  # 창이 나타나지 않도록 headless
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
 driver = webdriver.Chrome(options=options)
-#driver = webdriver.Chrome('chromedriver', options=options)
 
 
 class MainDialog(QMainWindow, MainUI):
@@ -52,6 +52,10 @@ class MainDialog(QMainWindow, MainUI):
             self.scrap_box = []
             self.cheapest_btn.clicked.connect(self.move_page)
             self.oil_price_btn.clicked.connect(self.oil_price_page)
+
+            self.price_chart = StatPageUI()
+            self.tabWidget.insertTab(2, self.price_chart, "Price Chart")
+            self.self_btn.clicked.connect(lambda: self.tabWidget.setCurrentIndex(2))
 
         except Exception as e:
             print(e)
