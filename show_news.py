@@ -46,7 +46,7 @@ class MainDialog(QMainWindow, MainUI):
             self.show_news_label.setStyleSheet('font-size: 15px;')
             self.latest_btn.setStyleSheet('border: none;')
             self.relv_btn.setStyleSheet('border: none;')
-            self.get_latest_news()
+            self.get_relevance_news()
             self.relv_btn.clicked.connect(self.get_relevance_news)
             self.latest_btn.clicked.connect(self.get_latest_news)
             self.scrab_btn.clicked.connect(self.scrap_news)
@@ -54,14 +54,19 @@ class MainDialog(QMainWindow, MainUI):
             self.tabBar.hide()
             all_check1, all_check2, all_check3, all_check4 = show_prices.show_all_prices(self)                            ##박영욱
             local_check1, local_check2, local_check3, local_check4 = show_prices.show_local_prices(self)
-            self.label_12.setText("전국평균(원/리터)\n휘발유 {:.2f}원 (전일대비 {:+.2f}원)\n경유 {:.2f}원 (전일대비 {:+.2f}원)".format(all_check1, all_check2,all_check3, all_check4))
-            self.label_11.setText("성남평균(원/리터)\n휘발유 {:.2f}원 (전일대비 {:+.2f}원)\n경유 {:.2f}원 (전일대비 {:+.2f}원)".format(local_check1,local_check2,local_check3,local_check4))
+            #self.label_12.setText("전국평균(원/리터)\n휘발유 {:.2f}원 (전일대비 {:+.2f}원)\n경유 {:.2f}원 (전일대비 {:+.2f}원)".format(all_check1, all_check2,all_check3, all_check4))
+            #self.label_11.setText("성남평균(원/리터)\n휘발유 {:.2f}원 (전일대비 {:+.2f}원)\n경유 {:.2f}원 (전일대비 {:+.2f}원)".format(local_check1,local_check2,local_check3,local_check4))
             self.scrap_box = []
+            self.except_word=['유가증권','김하성','다르빗슈']
             self.cheapest_btn.clicked.connect(self.move_page)
             self.oil_price_btn.clicked.connect(self.oil_price_page)
             self.main_cover_btn_1.clicked.connect(self.get_main)
             self.main_cover_btn_2.clicked.connect(self.get_main)
             self.main_cover_btn_3.clicked.connect(self.get_main)
+            self.name_label_1.setText('전국평균\n(원/리터)')
+            self.name_label_2.setText('성남평균\n(원/리터)')
+            self.value_label_1.setText('휘발유: {:.2f} ({:+.2f})\n경유: {:.2f} ({:+.2f})'.format(all_check1, all_check2,all_check3, all_check4))
+            self.value_label_2.setText('휘발유: {:.2f} ({:+.2f})\n경유: {:.2f} ({:+.2f})'.format(local_check1, local_check2,local_check3, local_check4))
 
             try:
                 self.price_chart = StatPageUI()
@@ -136,9 +141,10 @@ class MainDialog(QMainWindow, MainUI):
             # title = title + news_title_new.text + '\n'
             link = news_title_new.get_attribute('href')
             text = news_title_new.text
-            if '유가증권' not in text:
-                title += f"<a href='{link}'>{text}</a><br>"
-                self.scrap_box.append({'Title': text, 'Url': link})
+            for i in self.except_word:
+                if i not in text:
+                    title += f"<a href='{link}'>{text}</a><br>"
+                    self.scrap_box.append({'Title': text, 'Url': link})
         self.show_news_label.setText(title)
         self.get_news_page(self.show_news_label)
 
