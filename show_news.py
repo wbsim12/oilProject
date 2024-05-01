@@ -41,11 +41,11 @@ class MainDialog(QMainWindow, MainUI):
             self.setupUi(self)
             self.set_driver()
             self.apply_stylesheet("html/style.css")  # CSS 파일 적용
-          #  self.latest_btn.setStyleSheet('background:#f7f7f7; color: black;')
-          #  self.relv_btn.setStyleSheet('background:#f7f7f7; color: black;')
             self.show_news_label.setStyleSheet('font-size: 15px;')
             self.latest_btn.setStyleSheet('border: none;')
             self.relv_btn.setStyleSheet('border: none;')
+           # self.unselect_all.setStyleSheet('border: 1px;')
+            #self.pushButton.setStyleSheet('border: 1px;')
             self.get_relevance_news()
             self.relv_btn.clicked.connect(self.get_relevance_news)
             self.latest_btn.clicked.connect(self.get_latest_news)
@@ -54,10 +54,8 @@ class MainDialog(QMainWindow, MainUI):
             self.tabBar.hide()
             all_check1, all_check2, all_check3, all_check4 = show_prices.show_all_prices(self)                            ##박영욱
             local_check1, local_check2, local_check3, local_check4 = show_prices.show_local_prices(self)
-            #self.label_12.setText("전국평균(원/리터)\n휘발유 {:.2f}원 (전일대비 {:+.2f}원)\n경유 {:.2f}원 (전일대비 {:+.2f}원)".format(all_check1, all_check2,all_check3, all_check4))
-            #self.label_11.setText("성남평균(원/리터)\n휘발유 {:.2f}원 (전일대비 {:+.2f}원)\n경유 {:.2f}원 (전일대비 {:+.2f}원)".format(local_check1,local_check2,local_check3,local_check4))
             self.scrap_box = []
-            self.except_word=['유가증권','김하성','다르빗슈']
+            #self.except_word=['유가증권','김하성','다르빗슈','반도체']
             self.cheapest_btn.clicked.connect(self.move_page)
             self.oil_price_btn.clicked.connect(self.oil_price_page)
             self.main_cover_btn_1.clicked.connect(self.get_main)
@@ -141,10 +139,9 @@ class MainDialog(QMainWindow, MainUI):
             # title = title + news_title_new.text + '\n'
             link = news_title_new.get_attribute('href')
             text = news_title_new.text
-            for i in self.except_word:
-                if i not in text:
-                    title += f"<a href='{link}'>{text}</a><br>"
-                    self.scrap_box.append({'Title': text, 'Url': link})
+           # if '유가증권' not in text:
+            title += f"<a href='{link}'>{text}</a><br>"
+            self.scrap_box.append({'Title': text, 'Url': link})
         self.show_news_label.setText(title)
         self.get_news_page(self.show_news_label)
 
@@ -163,23 +160,29 @@ class MainDialog(QMainWindow, MainUI):
             for news_title_relv in news_titles_relv:
                 link = news_title_relv.get_attribute('href')
                 text = news_title_relv.text
-                if '유가증권' not in text:
-                    title += f"<a href='{link}'>{text}</a><br>"
-                    self.scrap_box.append({'Title': text, 'Url': link})
+
+               # if '유가증권' not in text:
+                title += f"<a href='{link}'>{text}</a><br>"
+                self.scrap_box.append({'Title': text, 'Url': link})
             self.show_news_label.setText(title)
             self.get_news_page(self.show_news_label)
 
         except Exception as e:
             print(e)
             print(traceback.format_exc())
+
+    def contains_text(self, text):
+        for i in self.except_word:
+            if i in text:
+                return False
+        return True
+
     def get_news_page(self, label): #뉴스페이지 보여주기
         label.setTextInteractionFlags(Qt.TextBrowserInteraction)  # 텍스트를 브라우저처럼 상호 작용 가능하도록 설정합니다.
         label.setOpenExternalLinks(True)  # 외부 링크를 클릭했을 때 브라우저에서 열도록 설정합니다.
         #label.setText(text)  # HTML 형식의 텍스트를 설정합니다.
 
     def scrap_news(self):
-       # self.scrab_btn.setStyleSheet('background-color:#6C757D')
-       # self.scrab_btn.setStyleSheet('background-color:#6C757D')
         self.scrab_btn.setStyleSheet("""
         QPushButton {
             background-color: #6C757D; 
@@ -191,7 +194,7 @@ class MainDialog(QMainWindow, MainUI):
         self.scrab_btn.setText('스크랩 완료')
         try:
             df = pd.DataFrame(self.scrap_box, columns=['Title', 'Url'])
-            df.to_csv('./scrap.csv', mode='a', header=True, index=False)
+            df.to_csv('./scrap.csv', mode='a', header=True, index=False,encoding='cp949')
         except Exception as e:
             print(e)
             print(traceback.format_exc())

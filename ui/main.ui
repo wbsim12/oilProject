@@ -114,10 +114,10 @@ color: rgb(64, 94, 150);</string>
      <widget class="QPushButton" name="oil_price_btn">
       <property name="geometry">
        <rect>
-        <x>235</x>
+        <x>222</x>
         <y>170</y>
-        <width>120</width>
-        <height>120</height>
+        <width>140</width>
+        <height>140</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -141,10 +141,10 @@ border-radius: 5px;</string>
      <widget class="QPushButton" name="self_btn">
       <property name="geometry">
        <rect>
-        <x>57</x>
+        <x>44</x>
         <y>170</y>
-        <width>120</width>
-        <height>120</height>
+        <width>140</width>
+        <height>140</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -168,10 +168,10 @@ border-radius: 5px;</string>
      <widget class="QPushButton" name="cheapest_btn">
       <property name="geometry">
        <rect>
-        <x>413</x>
+        <x>400</x>
         <y>170</y>
-        <width>120</width>
-        <height>120</height>
+        <width>140</width>
+        <height>140</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -197,7 +197,7 @@ border-radius: 5px;
       <property name="geometry">
        <rect>
         <x>235</x>
-        <y>17</y>
+        <y>25</y>
         <width>231</width>
         <height>35</height>
        </rect>
@@ -212,8 +212,8 @@ border-radius: 5px;
      <widget class="QPushButton" name="search_btn">
       <property name="geometry">
        <rect>
-        <x>480</x>
-        <y>20</y>
+        <x>470</x>
+        <y>30</y>
         <width>50</width>
         <height>28</height>
        </rect>
@@ -231,9 +231,9 @@ border-radius: 5px;</string>
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>40</x>
         <y>310</y>
-        <width>171</width>
+        <width>140</width>
         <height>21</height>
        </rect>
       </property>
@@ -247,9 +247,9 @@ border-radius: 5px;</string>
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>220</x>
         <y>310</y>
-        <width>171</width>
+        <width>140</width>
         <height>21</height>
        </rect>
       </property>
@@ -265,7 +265,7 @@ border-radius: 5px;</string>
        <rect>
         <x>400</x>
         <y>310</y>
-        <width>171</width>
+        <width>140</width>
         <height>21</height>
        </rect>
       </property>
@@ -279,9 +279,9 @@ border-radius: 5px;</string>
      <widget class="QLabel" name="label_7">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>220</x>
         <y>330</y>
-        <width>171</width>
+        <width>140</width>
         <height>21</height>
        </rect>
       </property>
@@ -295,9 +295,9 @@ border-radius: 5px;</string>
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>40</x>
         <y>330</y>
-        <width>171</width>
+        <width>140</width>
         <height>21</height>
        </rect>
       </property>
@@ -334,7 +334,7 @@ border-radius: 5px;</string>
         <x>0</x>
         <y>0</y>
         <width>590</width>
-        <height>70</height>
+        <height>80</height>
        </rect>
       </property>
       <property name="font">
@@ -358,7 +358,7 @@ border-radius: 5px;</string>
       <property name="geometry">
        <rect>
         <x>-10</x>
-        <y>390</y>
+        <y>370</y>
         <width>811</width>
         <height>341</height>
        </rect>
@@ -378,7 +378,7 @@ border-radius: 5px;</string>
        <rect>
         <x>400</x>
         <y>330</y>
-        <width>171</width>
+        <width>140</width>
         <height>21</height>
        </rect>
       </property>
@@ -420,14 +420,14 @@ background-color: rgb(64, 94, 150);</string>
       <property name="geometry">
        <rect>
         <x>295</x>
-        <y>70</y>
+        <y>80</y>
         <width>90</width>
-        <height>60</height>
+        <height>50</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>10</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -443,47 +443,17 @@ border:none;</string>
        <string/>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="value_label_2">
       <property name="geometry">
        <rect>
         <x>385</x>
-        <y>70</y>
+        <y>80</y>
         <width>206</width>
-        <height>60</height>
+        <height>50</height>
        </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(64, 94, 150,0.2);
-border:none;</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="name_label_1">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>70</y>
-        <width>90</width>
-        <height>60</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(64, 94, 150,0.2);
@@ -499,13 +469,43 @@ border:none;</string>
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
+     <widget class="QLabel" name="name_label_1">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>80</y>
+        <width>90</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150,0.2);
+border:none;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
      <widget class="QLabel" name="value_label_1">
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>70</y>
+        <y>80</y>
         <width>206</width>
-        <height>60</height>
+        <height>50</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -519,7 +519,7 @@ border:none;</string>
        <string/>
       </property>
       <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label_11">
@@ -611,8 +611,8 @@ background-color: rgb(64, 94, 150);</string>
        <rect>
         <x>0</x>
         <y>80</y>
-        <width>571</width>
-        <height>561</height>
+        <width>581</width>
+        <height>591</height>
        </rect>
       </property>
       <property name="url">
@@ -681,7 +681,7 @@ color: rgb(0, 0, 0);</string>
         <x>0</x>
         <y>0</y>
         <width>590</width>
-        <height>70</height>
+        <height>80</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -762,7 +762,7 @@ background-color: rgb(64, 94, 150);</string>
         <x>0</x>
         <y>0</y>
         <width>590</width>
-        <height>70</height>
+        <height>80</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -776,8 +776,8 @@ background-color: rgb(64, 94, 150);</string>
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>70</y>
-        <width>581</width>
+        <y>80</y>
+        <width>591</width>
         <height>601</height>
        </rect>
       </property>
@@ -850,10 +850,10 @@ color: rgb(0, 0, 0);</string>
      <widget class="QWebEngineView" name="web_price_view">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>0</x>
         <y>80</y>
-        <width>521</width>
-        <height>511</height>
+        <width>581</width>
+        <height>591</height>
        </rect>
       </property>
       <property name="url">
@@ -868,7 +868,7 @@ color: rgb(0, 0, 0);</string>
         <x>0</x>
         <y>0</y>
         <width>590</width>
-        <height>70</height>
+        <height>80</height>
        </rect>
       </property>
       <property name="styleSheet">

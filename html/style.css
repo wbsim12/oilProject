@@ -1,31 +1,33 @@
 QPushButton{
-   color: white;
+   color:  #f7f7f7;
    background-color: #405E96;
    border-radius: 5px;
 }
-QPushButton:hover{
-   background-color :  #3A4E81;
+
+QPushButton.search_btn:hover{
+ /*  background-color :  #3A4E81;*/
+   background-color :  #6D85B7;
    border-color :  #4B6AA8;
    border-style : solid;
    border-width : 5px;
-   border-radius : 30px;
+   /*border-radius : 30px;*/
 }
 
 QTabWidget{
-
     background-color: #f7f7f7;
 }
 
-QPushButton.latest_btn:active,
-QPushButton.relv_btn:active {
-    background-color: #f7f7f7;
-}
 
-QPushButton.scrab_btn:active{
+/*QPushButton.scrab_btn:active{
     background-color : #6C757D;
     border-color:#6C757D;
-}
-/*
-QPushButton.scrab_btn:hover{
-    border-color: #f7f7f7;
 }*/
+
+QPushButton:hover{
+/*    background-color :  #6D85B7;*/
+    background-color :   #f7f7f7;
+}
+
+QTabWidget QTabBar{
+    background-color: #6C757D
+}
