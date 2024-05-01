@@ -1,52 +1,41 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QRadioButton, QVBoxLayout, QWidget
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox, QPushButton
+from PyQt5.QtWebEngineWidgets import QWebEngineView
 import plotly.graph_objects as go
 import requests
+from plotly.subplots import make_subplots
+import plotly.io as pio
 
 class OilPriceApp(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Oil Prices App")
 
-        # 라디오 버튼 생성
-        self.gasoline_radio = QRadioButton('휘발유')
-        self.gasoline_radio.toggled.connect(self.plot_avg_prices)
-        self.diesel_radio = QRadioButton('경유')
-        self.diesel_radio.toggled.connect(self.plot_avg_prices)
-        self.gasoline_and_diesel_radio = QRadioButton('휘발유 + 경유')
-        self.gasoline_and_diesel_radio.toggled.connect(self.plot_both_prices)
-
         # 중앙 위젯 및 레이아웃 생성
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
         layout = QVBoxLayout(self.central_widget)
-        layout.addWidget(self.gasoline_radio)
-        layout.addWidget(self.diesel_radio)
-        layout.addWidget(self.gasoline_and_diesel_radio)
 
-    def plot_avg_prices(self, checked):
-        if checked:
-            if self.sender() == self.gasoline_radio:
-                product_code = 'B027'  # 휘발유 코드
-                product_name = '휘발유'
-                line_color = 'red'  # 휘발유 선 색상을 빨간색으로 설정
-            elif self.sender() == self.diesel_radio:
-                product_code = 'D047'  # 경유 코드
-                product_name = '경유'
-                line_color = 'blue'  # 경유 선 색상을 파란색으로 설정
+        # 버튼 생성
+        self.button_gasoline = QPushButton("휘발유")
+        self.button_gasoline.clicked.connect(self.update_graph)
+        layout.addWidget(self.button_gasoline)
 
-            # 주어진 JSON 데이터
-            data = self.avg_sido_price()
+        self.button_diesel = QPushButton("경유")
+        self.button_diesel.clicked.connect(self.update_graph)
+        layout.addWidget(self.button_diesel)
 
-            # 선택된 유종의 데이터만 선택
-            selected_data = [item for item in data['RESULT']['OIL'] if item['PRODCD'] == product_code]
+        self.button_both = QPushButton("휘발유+경유")
+        self.button_both.clicked.connect(self.update_graph)
+        layout.addWidget(self.button_both)
 
-            # 유종의 가격 데이터 추출
-            prices = [item['PRICE'] for item in selected_data]
-            sido_names = [item['SIDONM'] for item in selected_data]
-
-            # 그래프 그리기
-            self.plot_graph(prices, sido_names=sido_names, product_name=product_name, line_color=line_color)
+        # 그래프 생성 및 추가
+        fig = make_subplots(rows=1, cols=1)
+        self.plot_interactive_graph(fig)
+        html = pio.to_html(fig, include_plotlyjs='cdn')
+        self.web_view = QWebEngineView()
+        self.web_view.setHtml(html)
+        layout.addWidget(self.web_view)
 
     def avg_sido_price(self):
         url = 'https://www.opinet.co.kr/api/avgSidoPrice.do'
@@ -57,37 +46,59 @@ class OilPriceApp(QMainWindow):
         result = requests.get(url, params=payload).json()
         return result
 
-    def plot_both_prices(self, checked):
-        if checked:
-            # 주어진 JSON 데이터
-            data = self.avg_sido_price()
+    def plot_interactive_graph(self, fig):
+        # 주어진 JSON 데이터
+        data = self.avg_sido_price()
 
-            # 휘발유와 경유 데이터 추출
-            gasoline_data = [item for item in data['RESULT']['OIL'] if item['PRODCD'] == 'B027']
-            diesel_data = [item for item in data['RESULT']['OIL'] if item['PRODCD'] == 'D047']
+        # 모든 지역 이름 추출
+        all_sido_names = [item['SIDONM'] for item in data['RESULT']['OIL']]
 
-            # 휘발유와 경유의 가격 데이터 추출
-            gasoline_prices = [item['PRICE'] for item in gasoline_data]
-            diesel_prices = [item['PRICE'] for item in diesel_data]
-            sido_names = [item['SIDONM'] for item in gasoline_data]
+        # 휘발유와 경유 데이터 추출
+        gasoline_data = {sido: None for sido in all_sido_names}
+        diesel_data = {sido: None for sido in all_sido_names}
+        for item in data['RESULT']['OIL']:
+            if item['PRODCD'] == 'B027':
+                gasoline_data[item['SIDONM']] = item['PRICE']
+            elif item['PRODCD'] == 'D047':
+                diesel_data[item['SIDONM']] = item['PRICE']
 
-            # 그래프 그리기
-            self.plot_graph(gasoline_prices, diesel_prices, sido_names, '휘발유 + 경유')
+        # 그래프 그리기
+        for sido_name in all_sido_names:
+            if sido_name in gasoline_data:
+                fig.add_trace(go.Scatter(x=[sido_name], y=[gasoline_data[sido_name]], mode='markers', marker=dict(color='red'), name='휘발유'), row=1, col=1)
+            if sido_name in diesel_data:
+                fig.add_trace(go.Scatter(x=[sido_name], y=[diesel_data[sido_name]], mode='markers', marker=dict(color='blue'), name='경유'), row=1, col=1)
 
-    def plot_graph(self, prices1, prices2=None, sido_names=None, product_name=None, line_color='blue'):
-        # 그래프 생성
-        fig = go.Figure()
+        fig.update_xaxes(title_text="지역", row=1, col=1)
+        fig.update_yaxes(title_text="가격 (원)", row=1, col=1)
 
-        if prices2 is not None and sido_names is not None:
-            fig.add_trace(go.Scatter(x=sido_names, y=prices1, mode='lines+markers', name='휘발유', marker=dict(color='red')))
-            fig.add_trace(go.Scatter(x=sido_names, y=prices2, mode='lines+markers', name='경유', marker=dict(color='blue')))
-        else:
-            if sido_names is None:
-                sido_names = ['']*len(prices1)  # 빈 문자열 리스트로 초기화
-            fig.add_trace(go.Scatter(x=sido_names, y=prices1, mode='lines+markers', name=product_name, marker=dict(color=line_color)))
+    def update_graph(self):
+        selected_region = "" # 이 부분은 삭제됩니다.
 
-        fig.update_layout(title=f'지역별 평균 가격 ({product_name})', xaxis_title='지역', yaxis_title='가격 (원)')
-        fig.show()
+        # 주어진 JSON 데이터
+        data = self.avg_sido_price()
+
+        # 모든 지역 이름 추출
+        all_sido_names = [item['SIDONM'] for item in data['RESULT']['OIL']]
+
+        # 특정 지역의 휘발유와 경유 데이터 추출
+        gasoline_data = {item['SIDONM']: item['PRICE'] for item in data['RESULT']['OIL'] if item['PRODCD'] == 'B027'}
+        diesel_data = {item['SIDONM']: item['PRICE'] for item in data['RESULT']['OIL'] if item['PRODCD'] == 'D047'}
+
+        # 선택된 버튼에 따라서 그래프 데이터 선택
+        fig = make_subplots(rows=1, cols=1)
+        if self.sender() == self.button_gasoline or self.sender() == self.button_both:
+            for sido_name, price in gasoline_data.items():
+                fig.add_trace(go.Scatter(x=[sido_name], y=[price], mode='markers', marker=dict(color='red'), name='휘발유'), row=1, col=1)
+        if self.sender() == self.button_diesel or self.sender() == self.button_both:
+            for sido_name, price in diesel_data.items():
+                fig.add_trace(go.Scatter(x=[sido_name], y=[price], mode='markers', marker=dict(color='blue'), name='경유'), row=1, col=1)
+
+        fig.update_xaxes(title_text="지역", row=1, col=1)
+        fig.update_yaxes(title_text="가격 (원)", row=1, col=1)
+
+        html = pio.to_html(fig, include_plotlyjs='cdn')
+        self.web_view.setHtml(html)
 
 def main():
     app = QApplication(sys.argv)
