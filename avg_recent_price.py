@@ -30,7 +30,7 @@ class avg_price():
 
                 # 그래프 생성
             fig = go.Figure()
-
+            #fig.update_layout(yaxis=dict(tickmode='linear', dtick=10))
                 # 경유 그래프 추가
             fig.add_trace(go.Scatter(x=dates, y=diesel_prices, mode='lines+markers', name='경유', marker=dict(color='blue')))
 
@@ -38,7 +38,9 @@ class avg_price():
             fig.add_trace(go.Scatter(x=dates, y=gasoline_prices, mode='lines+markers', name='휘발유', marker=dict(color='red')))
 
                 # 그래프 레이아웃 설정
-            fig.update_layout(title='Oil Prices Graph', xaxis_title='날짜', yaxis_title='가격 (원)')
+            fig.update_layout(title='전국 평균 유가', xaxis_title='날짜', yaxis_title='가격 (원)')
+
+            fig.update_layout(xaxis=dict(rangeslider_visible=True))
 
                 # 그래프 출력
             return fig
