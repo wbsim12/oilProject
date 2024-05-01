@@ -11,11 +11,12 @@ import datetime
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-
-from PyQt5.QtWidgets import QMainWindow, QApplication, QDialog, QMessageBox, QPushButton, QVBoxLayout, QLabel, QTextEdit
+from get_whole_price import show_prices
+from PyQt5.QtWidgets import QMainWindow, QApplication, QDialog, QMessageBox, QPushButton, QVBoxLayout, QLabel, \
+    QTextEdit, QTabBar
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import Qt, QTimer, QUrl
-
+from oil_price_stat import *
 from avg_recent_price import avg_price
 from kakao_map_test import kakao_map_set
 
@@ -40,25 +41,42 @@ class MainDialog(QMainWindow, MainUI):
             self.setupUi(self)
             self.set_driver()
             self.apply_stylesheet("html/style.css")  # CSS 파일 적용
-            self.latest_btn.setStyleSheet('background:#f7f7f7; color: black;')
-            self.relv_btn.setStyleSheet('background:#f7f7f7; color: black;')
+          #  self.latest_btn.setStyleSheet('background:#f7f7f7; color: black;')
+          #  self.relv_btn.setStyleSheet('background:#f7f7f7; color: black;')
             self.show_news_label.setStyleSheet('font-size: 15px;')
+            self.latest_btn.setStyleSheet('border: none;')
+            self.relv_btn.setStyleSheet('border: none;')
             self.get_latest_news()
             self.relv_btn.clicked.connect(self.get_relevance_news)
             self.latest_btn.clicked.connect(self.get_latest_news)
             self.scrab_btn.clicked.connect(self.scrap_news)
-
-
+            self.tabBar = self.tabWidget.findChild(QTabBar)
+            self.tabBar.hide()
+            all_check1, all_check2, all_check3, all_check4 = show_prices.show_all_prices(self)                            ##박영욱
+            local_check1, local_check2, local_check3, local_check4 = show_prices.show_local_prices(self)
+            self.label_12.setText("전국평균(원/리터)\n휘발유 {:.2f}원 (전일대비 {:+.2f}원)\n경유 {:.2f}원 (전일대비 {:+.2f}원)".format(all_check1, all_check2,all_check3, all_check4))
+            self.label_11.setText("성남평균(원/리터)\n휘발유 {:.2f}원 (전일대비 {:+.2f}원)\n경유 {:.2f}원 (전일대비 {:+.2f}원)".format(local_check1,local_check2,local_check3,local_check4))
             self.scrap_box = []
             self.cheapest_btn.clicked.connect(self.move_page)
             self.oil_price_btn.clicked.connect(self.oil_price_page)
+            self.price_chart = StatPageUI()
+            self.tabWidget.insertTab(2, self.price_chart, "Price Chart")
+            self.self_btn.clicked.connect(lambda: self.tabWidget.setCurrentIndex(2))
+            self.main_cover_btn_1.clicked.connect(self.get_main)
+            self.main_cover_btn_2.clicked.connect(self.get_main)
+            self.main_cover_btn_3.clicked.connect(self.get_main)
+
 
         except Exception as e:
             print(e)
             print(traceback.format_exc())
 
-
-
+    def get_main(self):
+        try:
+            self.tabWidget.setCurrentIndex(0)
+        except Exception as e:
+            print(e)
+            print(traceback.format_exc())
 
     def oil_price_page(self):
         try:
@@ -102,8 +120,8 @@ class MainDialog(QMainWindow, MainUI):
 
     def get_latest_news(self):  # 최신순 뉴스'
         self.scrap_box = [{'Title': None, 'Url': None}]
-        self.latest_btn.setStyleSheet('font-weight: bold; background-color : #f7f7f7;color : black')
-        self.relv_btn.setStyleSheet('font-weight: normal; background-color : #f7f7f7;color : black')
+        self.latest_btn.setStyleSheet('font-weight: bold; background-color : #f7f7f7;color : black; ')
+        self.relv_btn.setStyleSheet('font-weight: normal; background-color : #f7f7f7;color : black; ')
         self.scrab_btn.setText('전체 뉴스 스크랩')
         self.scrab_btn.setStyleSheet('background-color:#405E96')
         title = ''
@@ -140,6 +158,7 @@ class MainDialog(QMainWindow, MainUI):
                     self.scrap_box.append({'Title': text, 'Url': link})
             self.show_news_label.setText(title)
             self.get_news_page(self.show_news_label)
+
         except Exception as e:
             print(e)
             print(traceback.format_exc())
@@ -149,7 +168,16 @@ class MainDialog(QMainWindow, MainUI):
         #label.setText(text)  # HTML 형식의 텍스트를 설정합니다.
 
     def scrap_news(self):
-        self.scrab_btn.setStyleSheet('background-color:#6C757D')
+       # self.scrab_btn.setStyleSheet('background-color:#6C757D')
+       # self.scrab_btn.setStyleSheet('background-color:#6C757D')
+        self.scrab_btn.setStyleSheet("""
+        QPushButton {
+            background-color: #6C757D; 
+            border: 1px solid #6C757D;
+            color:black;
+        }
+    """)
+
         self.scrab_btn.setText('스크랩 완료')
         try:
             df = pd.DataFrame(self.scrap_box, columns=['Title', 'Url'])

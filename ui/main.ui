@@ -6,9 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>599</width>
-    <height>648</height>
+    <width>587</width>
+    <height>748</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>D2Coding</family>
+   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -19,12 +24,16 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>591</width>
-      <height>611</height>
+      <width>590</width>
+      <height>701</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(247, 247, 247);</string>
+    </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -33,11 +42,15 @@
      <widget class="QPushButton" name="scrab_btn">
       <property name="geometry">
        <rect>
-        <x>440</x>
-        <y>540</y>
-        <width>121</width>
+        <x>430</x>
+        <y>620</y>
+        <width>125</width>
         <height>28</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);
+border-radius: 5px;</string>
       </property>
       <property name="text">
        <string>뉴스 전체 스크랩</string>
@@ -46,14 +59,16 @@
      <widget class="QPushButton" name="relv_btn">
       <property name="geometry">
        <rect>
-        <x>430</x>
-        <y>330</y>
-        <width>65</width>
+        <x>400</x>
+        <y>400</y>
+        <width>70</width>
         <height>28</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">border:none;
+background-color: rgb(247, 247, 247);
+outline:none;</string>
       </property>
       <property name="text">
        <string>관련도순</string>
@@ -62,11 +77,15 @@
      <widget class="QPushButton" name="latest_btn">
       <property name="geometry">
        <rect>
-        <x>500</x>
-        <y>330</y>
-        <width>65</width>
+        <x>470</x>
+        <y>400</y>
+        <width>70</width>
         <height>28</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:none;
+background-color: rgb(247, 247, 247);</string>
       </property>
       <property name="text">
        <string>최신순</string>
@@ -75,9 +94,9 @@
      <widget class="QLabel" name="show_news_label">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>360</y>
-        <width>541</width>
+        <x>60</x>
+        <y>450</y>
+        <width>481</width>
         <height>171</height>
        </rect>
       </property>
@@ -86,7 +105,7 @@
 color: rgb(64, 94, 150);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Box</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <property name="text">
        <string>뉴스 제목</string>
@@ -95,11 +114,15 @@ color: rgb(64, 94, 150);</string>
      <widget class="QPushButton" name="oil_price_btn">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>140</y>
-        <width>170</width>
-        <height>131</height>
+        <x>235</x>
+        <y>170</y>
+        <width>120</width>
+        <height>120</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);
+border-radius: 5px;</string>
       </property>
       <property name="text">
        <string/>
@@ -118,11 +141,15 @@ color: rgb(64, 94, 150);</string>
      <widget class="QPushButton" name="self_btn">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>140</y>
-        <width>170</width>
-        <height>131</height>
+        <x>57</x>
+        <y>170</y>
+        <width>120</width>
+        <height>120</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);
+border-radius: 5px;</string>
       </property>
       <property name="text">
        <string/>
@@ -141,11 +168,16 @@ color: rgb(64, 94, 150);</string>
      <widget class="QPushButton" name="cheapest_btn">
       <property name="geometry">
        <rect>
-        <x>400</x>
-        <y>140</y>
-        <width>170</width>
-        <height>131</height>
+        <x>413</x>
+        <y>170</y>
+        <width>120</width>
+        <height>120</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);
+border-radius: 5px;
+</string>
       </property>
       <property name="text">
        <string/>
@@ -164,10 +196,10 @@ color: rgb(64, 94, 150);</string>
      <widget class="QLineEdit" name="lineEdit">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>100</y>
-        <width>311</width>
-        <height>28</height>
+        <x>235</x>
+        <y>17</y>
+        <width>231</width>
+        <height>35</height>
        </rect>
       </property>
       <property name="text">
@@ -180,11 +212,17 @@ color: rgb(64, 94, 150);</string>
      <widget class="QPushButton" name="search_btn">
       <property name="geometry">
        <rect>
-        <x>520</x>
-        <y>100</y>
+        <x>480</x>
+        <y>20</y>
         <width>50</width>
         <height>28</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);
+border-width:2px;
+border-color:rgb(44, 64, 120);
+border-radius: 5px;</string>
       </property>
       <property name="text">
        <string>검색</string>
@@ -194,7 +232,7 @@ color: rgb(64, 94, 150);</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>280</y>
+        <y>310</y>
         <width>171</width>
         <height>21</height>
        </rect>
@@ -210,7 +248,7 @@ color: rgb(64, 94, 150);</string>
       <property name="geometry">
        <rect>
         <x>210</x>
-        <y>280</y>
+        <y>310</y>
         <width>171</width>
         <height>21</height>
        </rect>
@@ -226,13 +264,13 @@ color: rgb(64, 94, 150);</string>
       <property name="geometry">
        <rect>
         <x>400</x>
-        <y>280</y>
+        <y>310</y>
         <width>171</width>
         <height>21</height>
        </rect>
       </property>
       <property name="text">
-       <string>현재 위치 최저가 주유소</string>
+       <string>현재 위치</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -242,7 +280,7 @@ color: rgb(64, 94, 150);</string>
       <property name="geometry">
        <rect>
         <x>210</x>
-        <y>300</y>
+        <y>330</y>
         <width>171</width>
         <height>21</height>
        </rect>
@@ -258,7 +296,7 @@ color: rgb(64, 94, 150);</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>300</y>
+        <y>330</y>
         <width>171</width>
         <height>21</height>
        </rect>
@@ -273,11 +311,18 @@ color: rgb(64, 94, 150);</string>
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>340</y>
+        <x>50</x>
+        <y>415</y>
         <width>161</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+       </font>
       </property>
       <property name="text">
        <string>'유가' 관련 뉴스</string>
@@ -286,9 +331,9 @@ color: rgb(64, 94, 150);</string>
      <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
-        <x>400</x>
-        <y>20</y>
-        <width>170</width>
+        <x>303</x>
+        <y>90</y>
+        <width>230</width>
         <height>60</height>
        </rect>
       </property>
@@ -308,9 +353,9 @@ color: rgb(64, 94, 150);</string>
      <widget class="QLabel" name="label_12">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>20</y>
-        <width>170</width>
+        <x>57</x>
+        <y>90</y>
+        <width>230</width>
         <height>60</height>
        </rect>
       </property>
@@ -330,18 +375,22 @@ color: rgb(64, 94, 150);</string>
      <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>20</y>
-        <width>151</width>
-        <height>111</height>
+        <x>20</x>
+        <y>0</y>
+        <width>211</width>
+        <height>70</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>24</pointsize>
+        <pointsize>25</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);
+color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
        <string>OIL LAB</string>
@@ -350,26 +399,238 @@ color: rgb(64, 94, 150);</string>
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
+     <widget class="QLabel" name="main_cover_label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>590</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="under_line_label">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>390</y>
+        <width>811</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(64, 94, 150);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>330</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>최저가 주유소</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="logo1_btn">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>0</y>
+        <width>51</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:none;
+background-color: rgb(64, 94, 150);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Downloads/log.png</normaloff>../../Downloads/log.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <zorder>under_line_label</zorder>
+     <zorder>main_cover_label</zorder>
+     <zorder>scrab_btn</zorder>
+     <zorder>relv_btn</zorder>
+     <zorder>latest_btn</zorder>
+     <zorder>show_news_label</zorder>
+     <zorder>oil_price_btn</zorder>
+     <zorder>self_btn</zorder>
+     <zorder>cheapest_btn</zorder>
+     <zorder>lineEdit</zorder>
+     <zorder>search_btn</zorder>
+     <zorder>label_2</zorder>
+     <zorder>label_5</zorder>
+     <zorder>label_6</zorder>
+     <zorder>label_7</zorder>
+     <zorder>label_8</zorder>
+     <zorder>label_10</zorder>
+     <zorder>label_11</zorder>
+     <zorder>label_12</zorder>
+     <zorder>label_9</zorder>
+     <zorder>label_4</zorder>
+     <zorder>logo1_btn</zorder>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
       <string>지도</string>
      </attribute>
-     <widget class="QWebEngineView" name="web_view">
+     <widget class="QWebEngineView" name="web_view" native="true">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
+        <x>0</x>
+        <y>80</y>
         <width>571</width>
         <height>561</height>
        </rect>
       </property>
-      <property name="url">
+      <property name="url" stdset="0">
        <url>
         <string>about:blank</string>
        </url>
       </property>
      </widget>
+     <widget class="QPushButton" name="logo1_btn1">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>0</y>
+        <width>51</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:none;
+background-color: rgb(64, 94, 150);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Downloads/log.png</normaloff>../../Downloads/log.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>0</y>
+        <width>211</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>25</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>OIL LAB</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>0</y>
+        <width>211</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>25</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>OIL LAB</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="main_cover_btn_1">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>590</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>label_13</zorder>
+     <zorder>web_view</zorder>
+     <zorder>main_cover_btn_1</zorder>
+     <zorder>label_14</zorder>
+     <zorder>logo1_btn1</zorder>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -502,7 +763,7 @@ color: rgb(64, 94, 150);</string>
         <x>500</x>
         <y>70</y>
         <width>131</width>
-        <height>392</height>
+        <height>463</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -634,26 +895,187 @@ color: rgb(64, 94, 150);</string>
        </item>
       </layout>
      </widget>
+     <widget class="QPushButton" name="logo1_btn2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>0</y>
+        <width>51</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:none;
+background-color: rgb(64, 94, 150);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Downloads/log.png</normaloff>../../Downloads/log.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>0</y>
+        <width>211</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>25</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>OIL LAB</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="main_cover_btn_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>590</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>verticalLayoutWidget</zorder>
+     <zorder>self_combo</zorder>
+     <zorder>explanation</zorder>
+     <zorder>label</zorder>
+     <zorder>oil_combo</zorder>
+     <zorder>pushButton</zorder>
+     <zorder>label_3</zorder>
+     <zorder>unselect_all</zorder>
+     <zorder>verticalLayoutWidget_2</zorder>
+     <zorder>main_cover_btn_2</zorder>
+     <zorder>label_15</zorder>
+     <zorder>logo1_btn2</zorder>
     </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
       <string>그래프2</string>
      </attribute>
-     <widget class="QWebEngineView" name="web_price_view">
+     <widget class="QWebEngineView" name="web_price_view" native="true">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>30</y>
+        <x>20</x>
+        <y>80</y>
         <width>521</width>
         <height>511</height>
        </rect>
       </property>
-      <property name="url">
+      <property name="url" stdset="0">
        <url>
         <string>about:blank</string>
        </url>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>0</y>
+        <width>51</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:none;
+background-color: rgb(64, 94, 150);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Downloads/log.png</normaloff>../../Downloads/log.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>0</y>
+        <width>211</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>25</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>OIL LAB</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="main_cover_btn_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>590</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>web_price_view</zorder>
+     <zorder>main_cover_btn_3</zorder>
+     <zorder>label_16</zorder>
+     <zorder>pushButton_5</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>쪽</string>
+     </attribute>
     </widget>
    </widget>
   </widget>
@@ -662,8 +1084,8 @@ color: rgb(64, 94, 150);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>599</width>
-     <height>21</height>
+     <width>587</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
