@@ -171,6 +171,10 @@
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(64, 94, 150);
+border-radius: 5px;</string>
+   </property>
    <property name="text">
     <string>모두 해제</string>
    </property>
@@ -183,6 +187,10 @@
      <width>101</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(64, 94, 150);
+border-radius: 5px;</string>
    </property>
    <property name="text">
     <string>확인</string>

@@ -28,13 +28,6 @@ def select_attr(df, attr, val):  # 해당 속성의 값들만 골라내고 그 �
     return df[df[attr] == val].drop(attr, axis=1)
 
 
-def mod_date_num(df):
-    df['날짜'] = pd.to_datetime(df['날짜'], format='%Y%m%d')
-    city_names = list(df.columns[2:])
-    for city in city_names:
-        df[city] = df[city].str.replace(',', '').astype(float)
-
-
 def get_previous_date(days):
     return datetime.today() - timedelta(days=days)
 
@@ -94,7 +87,7 @@ class StatPageUI(QMainWindow, stat_UI):
         self.vbox = self.findChild(QVBoxLayout, 'Graph')
         self.setup_custom_ui()
 
-        # CrawlOpiNet()  # 크롤링: 바로 가져오지 않고 크롤링 후 저장한 것을 가져오는 것만으로 괜찮을까? 스레드 사용?
+        # CrawlOpiNet()  # 크롤링: 바로 가져오지 않고 크롤링 후 저장한 것을 가져오는 것만으로 괜찮을까? 스레드 사용하여 호출
 
         dataset = None
         # 임시 데이터: UI 초기화 시 데이터를 가져온다?
@@ -109,9 +102,9 @@ class StatPageUI(QMainWindow, stat_UI):
         for i in 0, 1:
             for j in 0, 1:
                 pre_process(dataset[i][j])
-
         self.cities = dataset[0][0].columns.tolist()[2:]
         self.term = dataset[0][0]['날짜']
+
         self.pushButton.clicked.connect(lambda: self.plot_data(dataset, fig))
         for i in range(1, len(self.cities) + 1):
             getattr(self, f'checkBox_{i}').stateChanged.connect(lambda: self.plot_data(dataset, fig))
@@ -134,20 +127,16 @@ class StatPageUI(QMainWindow, stat_UI):
             self.plot_data_multi(dataset, fig)
         else:  # 아닌 경우 data frame은 하나.
             self.plot_data_single(dataset, fig)
-        try:
-            self.explanation.setText(
-                '대상 기간: ' + self.term[0].strftime('%Y년 %m월 %d일') + ' ~ ' +  # 출력문은 전달해주는 날짜로 한다: 원하는 날 선택할 수 있도록
-                self.term[len(self.term) - 1].strftime('%Y년  %m월 %d일'))
-        except Exception as e:
-            print(e)
-            print(traceback.format_exc())
+        self.explanation.setText(
+            '대상 기간: ' + self.term[0].strftime('%Y년 %m월 %d일') + ' ~ ' +  # 출력문은 전달해주는 날짜로 한다: 원하는 날 선택할 수 있도록
+            self.term[len(self.term) - 1].strftime('%Y년  %m월 %d일'))
 
     def plot_data_multi(self, dataset, fig):  # 셀프/비셀프 비교로 그리기
-        self.check_ax(fig)
+        self.check_ax(fig)  # 그림이 그려져 있는지 확인하고 초기화 한다.
 
         data = dataset[self.oil_combo.currentIndex()]  # dataframe 2개, self와 비 self
 
-        for j in range(0, 2):
+        for j in range(0, 2):  # self, non-self 데이터에대한 plotting을 각각 수행한다.
             for i, col in enumerate(data[j].columns[2:], start=1):
                 if j == 0:  # self
                     a = '-'
@@ -195,9 +184,9 @@ class StatPageUI(QMainWindow, stat_UI):
 
     def check_ax(self, fig):
         # ax를 함수 외부에서 초기화된 경우 넘어간다. # 파이썬에 이런 기능이...
-        if not hasattr(self, 'ax'):
+        if not hasattr(self, 'ax'):  # ax가 객체의 변수로 없다면 생성, 초기화
             self.ax = fig.add_subplot(111)
-        self.ax.clear()
+        self.ax.clear()  # ax를 지운다.
 
 
 class CrawlOpiNet:
@@ -214,9 +203,10 @@ class CrawlOpiNet:
         self.diesel_df, self.gasoline_df = self.make_datas()
         self.driver.quit()  # close는 활성화된 창만 닫아 크롬이 백그라운드에서 계속 실행된다.
 
+        self.cities = self.diesel_df.columns.tolist()[2:]
         # 날짜 속성의 데이터를 pandas가 날짜로 다루도록, string으로 받은 숫자 데이터들도 숫자로 형변환한다.
-        mod_date_num(self.diesel_df)
-        mod_date_num(self.gasoline_df)
+        self.mod_date_num(self.diesel_df)
+        self.mod_date_num(self.gasoline_df)
 
         non_self_gas_df = select_attr(self.gasoline_df, '구분', '비셀프')
         self_gas_df = select_attr(self.gasoline_df, '구분', '셀프')
@@ -229,45 +219,48 @@ class CrawlOpiNet:
         non_self_die_df.to_csv('./dummy/non_self_die_df.csv', encoding='cp949', sep=',')
         self_die_df.to_csv('./dummy/self_die_df.csv', encoding='cp949', sep=',')
 
-    def find_info(self):
-        try:
-            # 페이지 조작
-            # 날짜 선택
-            self.day_select()
-            # 제품 선택
-            self.oil_type_select('휘발유')
-        except Exception as e:
-            print(e)
-            print(traceback.format_exc())
+    def mod_date_num(self, df):
+        df['날짜'] = pd.to_datetime(df['날짜'], format='%Y%m%d')  # pd가 날짜 포멧으로 다루도록 형변환한다.
+        for city in self.cities: # 데이터를 string에서 숫자로 바꾼다. csv에서 불러오든 크롤링한 데이터를 사용하든 적용해야.
+            df[city] = df[city].str.replace(',', '').astype(float)
+
+    def find_info(self):  # 이동한 페이지 내에서 원하는 데이터 찾기
+        # 페이지 조작 1
+        self.day_select()
+        self.select_gasoline_info()
+        # 크롤링 1
+        datas = self.driver.find_elements('xpath',
+                                          '/html/body/div/div[2]/div[2]/div[2]/form/div[6]/div/div/table/tbody/tr')
+        data = make_2d_table(datas)  # 2차원 df으로 가공
+
+        # 페이지 조작 2
+        self.select_deisel_info()
+        # 크롤링 2
+        datas2 = self.driver.find_elements('xpath',
+                                           '/html/body/div/div[2]/div[2]/div[2]/form/div[6]/div/div/table/tbody/tr')
+        data2 = make_2d_table(datas2)  # 2차원 df으로 가공
+
+        return data, data2
+
+    def select_gasoline_info(self):
+        self.oil_type_select('휘발유')
         time.sleep(1)
-        # 조회
         while not self.click_search():
             print('clicking')
         time.sleep(3)
 
-        return self.make_gasoline_diesel_data()
-
-    def initiate_chrome_driver(self):
+    def initiate_chrome_driver(self):  # 크롤링한 페이지로 이동
         self.driver.get('https://www.opinet.co.kr/user/doposfr/dopOsFrSelect.do')
         time.sleep(2)
         self.driver.find_element(By.XPATH, '//*[@id="search_form"]/div[2]/ul/li[4]/a').click()
         time.sleep(1)
 
-    def make_gasoline_diesel_data(self):
-        # 데이터 가져오기
-        datas = self.driver.find_elements('xpath',
-                                          '/html/body/div/div[2]/div[2]/div[2]/form/div[6]/div/div/table/tbody/tr')
-        data = make_2d_table(datas)
+    def select_deisel_info(self):
         self.oil_type_select('경유')
         time.sleep(1)
         while not self.click_search():
             print('clicking')
         time.sleep(3)
-        datas2 = self.driver.find_elements('xpath',
-                                           '/html/body/div/div[2]/div[2]/div[2]/form/div[6]/div/div/table/tbody/tr')
-        data2 = make_2d_table(datas2)
-
-        return data, data2
 
     def click_search(self):
         try:
