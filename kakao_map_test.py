@@ -22,7 +22,7 @@ options = webdriver.ChromeOptions()
 options.add_argument('--headless') # 창이 나타나지 않도록 headless
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
-
+driver = webdriver.Chrome(options=options)
 class kakao_map_set():
     def set_url(self):
         return "http://localhost:8000/kao_index.html"
