@@ -1,0 +1,458 @@
+[
+    {
+        "name": "\ub300\ubcf4\uac74\uc124(\uc8fc) \uc131\ub0a8(\uad6c\ub9ac\ubc29\ud5a5)\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc218\uc815\uad6c \uc0b0\uc131\ub300\ub85c 41",
+        "gasoline": 1672,
+        "diesel": 1512,
+        "x": 37.4355426733266,
+        "y": 127.123194413519
+    },
+    {
+        "name": "\uc544\uc2dc\uc544\uc140\ud504\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c \ub454\ucd0c\ub300\ub85c 235 (\ud558\ub300\uc6d0\ub3d9)",
+        "gasoline": 1684,
+        "diesel": 1534,
+        "x": 37.428552360389,
+        "y": 127.144339624075
+    },
+    {
+        "name": "\ud558\uc774\ud14c\ud06c\uc5d0\ub108\uc9c0(\uc8fc)",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c \uc21c\ud658\ub85c 128",
+        "gasoline": 1685,
+        "diesel": 1535,
+        "x": 37.4352169480201,
+        "y": 127.179200496999
+    },
+    {
+        "name": "\uc9c0\uc5d0\uc2a4\uce7c\ud14d\uc2a4\u321c\uc9c1\uc601 \uc131\ub0a8\uc81c\uc77c\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc218\uc815\uad6c \uc131\ub0a8\ub300\ub85c 1268 (\ud0dc\ud3c9\ub3d9)",
+        "gasoline": 1689,
+        "diesel": 1579,
+        "x": 37.4428095082424,
+        "y": 127.127638433647
+    },
+    {
+        "name": "(\uc720)\ub3d9\ud558\uc11d\uc720 \uc1a1\ud30cIC\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc218\uc815\uad6c \ud5cc\ub989\ub85c 893",
+        "gasoline": 1693,
+        "diesel": 1563,
+        "x": 37.4667834978335,
+        "y": 127.133002888859
+    },
+    {
+        "name": "\uc5d1\uc2a4\ud3ec\uc8fc\uc720\uc18c (\uc8fc)\ud574\uc131\uc5d0\ub108\uc9c0",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c \uc21c\ud658\ub85c 75 (\uc0c1\ub300\uc6d0\ub3d9)",
+        "gasoline": 1695,
+        "diesel": 1535,
+        "x": 37.4305174441124,
+        "y": 127.17913359228
+    },
+    {
+        "name": "\uc0b0\uc131\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc218\uc815\uad6c \uc0b0\uc131\ub300\ub85c 607 (\uc591\uc9c0\ub3d9)",
+        "gasoline": 1695,
+        "diesel": 1555,
+        "x": 37.4635408622236,
+        "y": 127.169839410123
+    },
+    {
+        "name": "\uac00\uc57c\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c \uacbd\ucda9\ub300\ub85c 2590 (\uac08\ud604\ub3d9)",
+        "gasoline": 1695,
+        "diesel": 1545,
+        "x": 37.4222295602904,
+        "y": 127.162728213667
+    },
+    {
+        "name": "\uc774\ub8e8\uace0\uc5d0\ub108\uc9c0",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c \uacbd\ucda9\ub300\ub85c 2441 (\uac08\ud604\ub3d9)",
+        "gasoline": 1695,
+        "diesel": 1545,
+        "x": 37.4233375097218,
+        "y": 127.179613346332
+    },
+    {
+        "name": "\uc12c\ub9c8\uc744\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c  \ud76c\ub9dd\ub85c 87 (\ub3c4\ucd0c\ub3d9)",
+        "gasoline": 1697,
+        "diesel": 1567,
+        "x": 37.4187802931905,
+        "y": 127.150973961987
+    },
+    {
+        "name": "\uc9c0\uc5d0\uc2a4\uce7c\ud14d\uc2a4\u321c \ud558\ub300\uc6d0\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c \ub454\ucd0c\ub300\ub85c 200",
+        "gasoline": 1698,
+        "diesel": 1538,
+        "x": 37.4283301563291,
+        "y": 127.140612950237
+    },
+    {
+        "name": "\ub0a8\uc120\uc11d\uc720\u321c \uad6c\ub3c4\uc77c\uc8fc\uc720\uc18c \ud574\uc131",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c \uc81c\uc77c\ub85c 14 (\ud558\ub300\uc6d0\ub3d9)",
+        "gasoline": 1698,
+        "diesel": 1538,
+        "x": 37.4284735151632,
+        "y": 127.138084571532
+    },
+    {
+        "name": "MOT\ud50c\ub7ec\uc2a4",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc218\uc815\uad6c \uc0b0\uc131\ub300\ub85c 463 (\ub2e8\ub300\ub3d9)",
+        "gasoline": 1698,
+        "diesel": 1568,
+        "x": 37.4531916703691,
+        "y": 127.160154578609
+    },
+    {
+        "name": "\ubd84\ub2f9\ud0d1\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \ud310\uad50\ub85c 751 (\uc57c\ud0d1\ub3d9)",
+        "gasoline": 1704,
+        "diesel": 1560,
+        "x": 37.4056203090459,
+        "y": 127.156362256229
+    },
+    {
+        "name": "(\uc8fc)\uc0bc\ud45c\uc5d0\ub108\uc9c0 \uc57c\ud0d1\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \ub3cc\ub9c8\ub85c 910",
+        "gasoline": 1704,
+        "diesel": 1560,
+        "x": 37.4129269781267,
+        "y": 127.144214186445
+    },
+    {
+        "name": "\ubd84\ub2f9\ub85c\ub9c8\ub3c4\uc2dc\uace0\uc18d\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \uc218\ub0b4\ub85c 2 (\uc218\ub0b4\ub3d9)",
+        "gasoline": 1706,
+        "diesel": 1596,
+        "x": 37.3834034947837,
+        "y": 127.114102235771
+    },
+    {
+        "name": "\ubd84\ub2f9\ub85c\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \ub300\uc655\ud310\uad50\ub85c 381 (\ubc31\ud604\ub3d9)",
+        "gasoline": 1709,
+        "diesel": 1545,
+        "x": 37.3781190519301,
+        "y": 127.101688649027
+    },
+    {
+        "name": "\uad81\ub0b4\ub3d9\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \ub300\uc655\ud310\uad50\ub85c 270",
+        "gasoline": 1709,
+        "diesel": 1555,
+        "x": 37.3677146190299,
+        "y": 127.102344386063
+    },
+    {
+        "name": "\u321c\ud5e8\uc9c0\uc2a4\uc5d0\ub108\uc9c0 \uad6c\ub3c4\uc77c\uc8fc\uc720\uc18c \ud1a8\uac8c\uc774\ud2b8",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \ub300\uc655\ud310\uad50\ub85c 263",
+        "gasoline": 1709,
+        "diesel": 1545,
+        "x": 37.3673381429109,
+        "y": 127.101329782409
+    },
+    {
+        "name": "SK\uacf5\ub2e8\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c \ub454\ucd0c\ub300\ub85c 413",
+        "gasoline": 1718,
+        "diesel": 1609,
+        "x": 37.4333274625725,
+        "y": 127.16299301602
+    },
+    {
+        "name": "HD\ud604\ub300\uc624\uc77c\ubc45\ud06c\u321c\uc9c1\uc601 \uc9c0\uc54c\uc528\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \uc131\ub0a8\ub300\ub85c407\ubc88\uae38 13",
+        "gasoline": 1718,
+        "diesel": 1598,
+        "x": 37.3722129416514,
+        "y": 127.106280683249
+    },
+    {
+        "name": "SK\uc5d0\ub108\uc9c0(\uc8fc) \ub2e8\ub300\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc218\uc815\uad6c \ud76c\ub9dd\ub85c 530 (\uc0b0\uc131\ub3d9)",
+        "gasoline": 1719,
+        "diesel": 1569,
+        "x": 37.4508450038384,
+        "y": 127.15166979874
+    },
+    {
+        "name": "NH\ud558\ub098\ub85c\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \uc131\ub0a8\ub300\ub85c43\ubc88\uae38 11",
+        "gasoline": 1720,
+        "diesel": 1559,
+        "x": 37.3387649915616,
+        "y": 127.106677024605
+    },
+    {
+        "name": "\ud310\uad50\ud558\uc774\uc6e8\uc774\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc218\uc815\uad6c \ub300\uc655\ud310\uad50\ub85c 1015",
+        "gasoline": 1724,
+        "diesel": 1564,
+        "x": 37.4310565746922,
+        "y": 127.102146965226
+    },
+    {
+        "name": "\ud55c\uac15\uc5d0\ub108\uc9c0(\uc8fc)",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c \uc5ec\uc218\ub300\ub85c 147 (\uc5ec\uc218\ub3d9)",
+        "gasoline": 1725,
+        "diesel": 1565,
+        "x": 37.4223158129067,
+        "y": 127.118821713405
+    },
+    {
+        "name": "HD\ud604\ub300\uc624\uc77c\ubc45\ud06c\u321c\uc9c1\uc601 \uc704\ub840\ud604\ub300\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc218\uc815\uad6c \uc131\ub0a8\ub300\ub85c 1529",
+        "gasoline": 1727,
+        "diesel": 1585,
+        "x": 37.4664215303031,
+        "y": 127.126044474376
+    },
+    {
+        "name": "\u321c\uc18c\ubaa8 \ub3d9\ud654\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \ub3cc\ub9c8\ub85c 176 (\uc815\uc790\ub3d9)",
+        "gasoline": 1728,
+        "diesel": 1598,
+        "x": 37.3546250514051,
+        "y": 127.118904217379
+    },
+    {
+        "name": "HD\ud604\ub300\uc624\uc77c\ubc45\ud06c\u321c\uc9c1\uc601 \ub0a8\ubb38\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc218\uc815\uad6c \uc131\ub0a8\ub300\ub85c 1301 (\ud0dc\ud3c9\ub3d9)",
+        "gasoline": 1729,
+        "diesel": 1599,
+        "x": 37.4458908510835,
+        "y": 127.126497766475
+    },
+    {
+        "name": "SK KH\uc5d0\ub108\uc9c0 \ud310\uad50\ubaa8\ub4dc\ub2c8\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \ub3d9\ud310\uad50\ub85c 42 (\ubc31\ud604\ub3d9)",
+        "gasoline": 1737,
+        "diesel": 1617,
+        "x": 37.3877502303413,
+        "y": 127.113426103952
+    },
+    {
+        "name": "HD\ud604\ub300\uc624\uc77c\ubc45\ud06c\u321c\uc9c1\uc601 \uacbd\uc6d0\uc140\ud504\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc218\uc815\uad6c \uc131\ub0a8\ub300\ub85c 1414 (\ubcf5\uc815\ub3d9)",
+        "gasoline": 1739,
+        "diesel": 1595,
+        "x": 37.4561152964847,
+        "y": 127.126815627534
+    },
+    {
+        "name": "\uae08\uad11\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c \uae08\uc0c1\ub85c 79 (\uae08\uad11\ub3d9)",
+        "gasoline": 1755,
+        "diesel": 1599,
+        "x": 37.4419826838602,
+        "y": 127.164176387967
+    },
+    {
+        "name": "\uad6c\ub3c4\uc77c\uc8fc\uc720\uc18c \uc131\ub0a8",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c \uac08\ub9c8\uce58\ub85c 233 (\uc0c1\ub300\uc6d0\ub3d9)",
+        "gasoline": 1758,
+        "diesel": 1535,
+        "x": 37.4349826363696,
+        "y": 127.173801765507
+    },
+    {
+        "name": "\u321c\uc624\uc77c\ud50c\ub77c\uc790 \uc131\ub0a8\uc9c0\uc810 \ub3cc\ub9c8\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c \ub454\ucd0c\ub300\ub85c 295 (\ud558\ub300\uc6d0\ub3d9)",
+        "gasoline": 1758,
+        "diesel": 1627,
+        "x": 37.4302528276657,
+        "y": 127.150850684064
+    },
+    {
+        "name": "e-\ud478\ub978\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc218\uc815\uad6c \uc131\ub0a8\ub300\ub85c 1482 (\ubcf5\uc815\ub3d9)",
+        "gasoline": 1759,
+        "diesel": 1628,
+        "x": 37.462330789465,
+        "y": 127.126438760656
+    },
+    {
+        "name": "\ubd84\ub2f9\uc81c\uc77c\uc5d0\ub108\uc9c0",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc218\uc815\uad6c \uc5ec\uc218\ub300\ub85c 32",
+        "gasoline": 1759,
+        "diesel": 1619,
+        "x": 37.4221357073742,
+        "y": 127.105821473409
+    },
+    {
+        "name": "\uccad\uacc4\uc0b0\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc218\uc815\uad6c \uccad\uacc4\uc0b0\ub85c 458 (\uc0c1\uc801\ub3d9)",
+        "gasoline": 1759,
+        "diesel": 1619,
+        "x": 37.4305388081449,
+        "y": 127.073164025078
+    },
+    {
+        "name": "\ud76c\uc131\uc11d\uc720(\uc8fc)\uae08\uace1",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \ubd88\uc815\ub85c 1 (\uc815\uc790\ub3d9)",
+        "gasoline": 1768,
+        "diesel": 1615,
+        "x": 37.3602014591086,
+        "y": 127.104655887578
+    },
+    {
+        "name": "(\uc8fc)\ub0a8\uacbd\uc11d\uc720 \ubd84\ub2f9\uc2a4\ud0c0self\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \uc0c8\ub9c8\uc744\ub85c 65",
+        "gasoline": 1769,
+        "diesel": 1609,
+        "x": 37.3833883390916,
+        "y": 127.137961771373
+    },
+    {
+        "name": "(\uc8fc)\uc0c8\uc11c\uc6b8\uc11d\uc720 \ub3d9\ud310\uad50\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc218\uc815\uad6c \ub300\uc655\ud310\uad50\ub85c 1002 (\uace0\ub4f1\ub3d9)",
+        "gasoline": 1769,
+        "diesel": 1637,
+        "x": 37.4297749254777,
+        "y": 127.102509483688
+    },
+    {
+        "name": "\ud310\uad50\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \uc6b4\uc911\ub85c 263",
+        "gasoline": 1775,
+        "diesel": 1627,
+        "x": 37.3893577532792,
+        "y": 127.092514252124
+    },
+    {
+        "name": "\uc774\uc6d0\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c \uad11\uba85\ub85c 368 (\uae08\uad11\ub3d9)",
+        "gasoline": 1775,
+        "diesel": 1599,
+        "x": 37.4463721437108,
+        "y": 127.166756814751
+    },
+    {
+        "name": "\uc0c1\ub300\uc6d0\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c \ud76c\ub9dd\ub85c 352",
+        "gasoline": 1775,
+        "diesel": 1615,
+        "x": 37.4372106590311,
+        "y": 127.158419039705
+    },
+    {
+        "name": "SK\uc5d0\ub108\uc9c0(\uc8fc) \uc2a4\ud0c0\ud305\uad11\ub3d9\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \ub300\uc655\ud310\uad50\ub85c644\ubc88\uae38 43",
+        "gasoline": 1777,
+        "diesel": 1617,
+        "x": 37.4001136655504,
+        "y": 127.111464231546
+    },
+    {
+        "name": "\uc2dc\ud2f0\ud640\uc624\uc77c\ud504\ub77c\uc790",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c \uc5ec\uc218\ub300\ub85c 200",
+        "gasoline": 1777,
+        "diesel": 1637,
+        "x": 37.4212644058585,
+        "y": 127.124863211982
+    },
+    {
+        "name": "\ud310\uad50\uc11c\uc77c\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \ud310\uad50\ub85c 315 (\uc0bc\ud3c9\ub3d9)",
+        "gasoline": 1777,
+        "diesel": 1617,
+        "x": 37.4034800517971,
+        "y": 127.109154084649
+    },
+    {
+        "name": "(\uc8fc)\uc0c8\uc11c\uc6b8\uc11d\uc720 \uc138\uc885",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc218\uc815\uad6c \uc5ec\uc218\ub300\ub85c 10 (\uc2dc\ud765\ub3d9)",
+        "gasoline": 1779,
+        "diesel": 1679,
+        "x": 37.4219546841551,
+        "y": 127.103490491362
+    },
+    {
+        "name": "HD\ud604\ub300\uc624\uc77c\ubc45\ud06c\u321c\uc9c1\uc601 \uc11c\ud604\uc140\ud504\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \uc11c\ud604\ub85c 488 (\ubd84\ub2f9\ub3d9)",
+        "gasoline": 1779,
+        "diesel": 1619,
+        "x": 37.3696699906324,
+        "y": 127.147721361519
+    },
+    {
+        "name": "HD\ud604\ub300\uc624\uc77c\ubc45\ud06c\u321c\uc9c1\uc601 \ud76c\ub9dd\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c \ud76c\ub9dd\ub85c 28 (\ub3c4\ucd0c\ub3d9)",
+        "gasoline": 1779,
+        "diesel": 1619,
+        "x": 37.4147735266229,
+        "y": 127.146848368609
+    },
+    {
+        "name": "SK KH\uc5d0\ub108\uc9c0 \ud310\uad50\uc6b4\uc911\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \ub3d9\ud310\uad50\ub85c 177 (\uc0bc\ud3c9\ub3d9)",
+        "gasoline": 1787,
+        "diesel": 1627,
+        "x": 37.3986003473229,
+        "y": 127.116474135253
+    },
+    {
+        "name": "\ubd84\ub2f9\ub300\uc77c\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \uc591\ud604\ub85c 312",
+        "gasoline": 1787,
+        "diesel": 1617,
+        "x": 37.4116035885308,
+        "y": 127.124187056979
+    },
+    {
+        "name": "HD\ud604\ub300\uc624\uc77c\ubc45\ud06c\u321c\uc9c1\uc601 \uc774\ub9e4\ub3d9\uc140\ud504\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \uc131\ub0a8\ub300\ub85c772\ubc88\uae38 2 (\uc774\ub9e4\ub3d9)",
+        "gasoline": 1795,
+        "diesel": 1619,
+        "x": 37.3982778162493,
+        "y": 127.12927363624
+    },
+    {
+        "name": "HD\ud604\ub300\uc624\uc77c\ubc45\ud06c\u321c\uc9c1\uc601 \uc218\ub0b4\ub3d9\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \ubd88\uc815\ub85c 274 (\uc218\ub0b4\ub3d9)",
+        "gasoline": 1795,
+        "diesel": 1629,
+        "x": 37.3676873528416,
+        "y": 127.128195747364
+    },
+    {
+        "name": "(\uc8fc)\uc0c8\uc11c\uc6b8\uc11d\uc720 \uc2e0\ub3c4\uc2dc\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \ud669\uc0c8\uc6b8\ub85c359\ubc88\uae38 3",
+        "gasoline": 1798,
+        "diesel": 1687,
+        "x": 37.38734725912,
+        "y": 127.123962865063
+    },
+    {
+        "name": "KH\uc5d0\ub108\uc9c0(\uc8fc)\uc9c1\uc601 \ubd84\ub2f9\uacf5\uc6d0\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \uc0c8\ub9c8\uc744\ub85c 27 (\uc11c\ud604\ub3d9)",
+        "gasoline": 1798,
+        "diesel": 1687,
+        "x": 37.3840392304785,
+        "y": 127.13349366917
+    },
+    {
+        "name": "\uc911\uc6d0\uc5d0\ub108\uc9c0 \uc140\ud504\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \uc911\uc6d0\uad6c \uc0b0\uc131\ub300\ub85c 336 (\uc911\ub3d9)",
+        "gasoline": 1827,
+        "diesel": 1697,
+        "x": 37.4430422194406,
+        "y": 127.154321274811
+    },
+    {
+        "name": "\uc11c\ud604\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \uc0c8\ub9c8\uc744\ub85c 19",
+        "gasoline": 1839,
+        "diesel": 1707,
+        "x": 37.3840593690938,
+        "y": 127.132732543595
+    },
+    {
+        "name": "\uc218\ud399\uc2a4\uc8fc\uc720\uc18c",
+        "address": "\uacbd\uae30 \uc131\ub0a8\uc2dc \ubd84\ub2f9\uad6c \uc131\ub0a8\ub300\ub85c 71 (\uad6c\ubbf8\ub3d9)",
+        "gasoline": 1867,
+        "diesel": 1717,
+        "x": 37.3423136484921,
+        "y": 127.108417041151
+    }
+]

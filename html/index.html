@@ -1,68 +1,127 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>키워드로 장소검색하기</title>
-
-</head>
-<body>
-<div id="map" style="width:100%;height:350px;"></div>
-
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3c4b318c7ffb3051aece7df4f7b7d66d&libraries=services"></script>
-<script>
-// 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
-var infowindow = new kakao.maps.InfoWindow({zIndex:1});
-
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div
-    mapOption = {
-        center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
-
-// 지도를 생성합니다
-var map = new kakao.maps.Map(mapContainer, mapOption);
-
-// 장소 검색 객체를 생성합니다
-var ps = new kakao.maps.services.Places();
-
-// 키워드로 장소를 검색합니다
-ps.keywordSearch('신도림 주유소', placesSearchCB);
-
-// 키워드 검색 완료 시 호출되는 콜백함수 입니다
-function placesSearchCB (data, status, pagination) {
-    if (status === kakao.maps.services.Status.OK) {
-
-        // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
-        // LatLngBounds 객체에 좌표를 추가합니다
-        var bounds = new kakao.maps.LatLngBounds();
-
-        for (var i=0; i<data.length; i++) {
-            displayMarker(data[i]);
-            bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+    <title>카카오맵에 마커 표시하기</title>
+    <style>
+        #map {
+            width: 550px;
+            height: 550px;
         }
 
-        // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
-        map.setBounds(bounds);
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div id="map"></div>
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3c4b318c7ffb3051aece7df4f7b7d66d"></script>
+<script>
+    // JSON 파일에서 위도와 경도 값을 읽어옵니다.
+    $.getJSON("./output.json", function(data) {
+        // 카카오맵 API를 초기화합니다.
+        kakao.maps.load(function () {
+            var mapContainer = document.getElementById('map');
+
+            // 마커들의 평균 위치를 계산합니다.
+            var totalX = 0;
+            var totalY = 0;
+            for (var i = 0; i < data.length; i++) {
+                totalX += data[i].x;
+                totalY += data[i].y;
+            }
+            var avgX = totalX / data.length;
+            var avgY = totalY / data.length;
+
+            var mapOptions = {
+                center: new kakao.maps.LatLng(avgX, avgY), // 마커들의 평균 위치를 중심으로 지도 설정
+                level: 8 // 초기 지도 확대 레벨
+            };
+            var map = new kakao.maps.Map(mapContainer, mapOptions);
+
+            // JSON 파일에서 읽어온 정보를 사용하여 마커를 생성하고 지도에 표시합니다.
+            var lowestGasolineIndex = findLowestGasolineIndex(data); // 가장 낮은 휘발유 가격을 가진 마커의 인덱스를 찾습니다.
+
+            for (var i = 0; i < data.length; i++) {
+                var markerPosition = new kakao.maps.LatLng(data[i].x, data[i].y);
+                var markerImage;
+
+                if (i === lowestGasolineIndex) {
+                    // 가장 낮은 휘발유 가격을 가진 마커는 노란색 별 모양 마커로 설정합니다.
+                    markerImage = new kakao.maps.MarkerImage(
+                        'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png',
+                        new kakao.maps.Size(24, 35),
+                        { offset: new kakao.maps.Point(13, 35) }
+                    );
+                } else {
+                    // 나머지 마커는 파란색 마커로 설정합니다.
+                    markerImage = new kakao.maps.MarkerImage(
+                        'https://t1.daumcdn.net/localimg/localimages/07/2018/pc/img/marker_spot.png',
+                        new kakao.maps.Size(24, 35),
+                        { offset: new kakao.maps.Point(13, 35) }
+                    );
+                }
+
+                var marker = new kakao.maps.Marker({
+                    position: markerPosition,
+                    image: markerImage
+                });
+
+                // 인포윈도우(정보창)를 생성하고 마커 위에 표시될 내용을 설정합니다.
+                var infowindowContent = '<div style="padding:10px;font-size:12px;width:240px;height:80px;">' +
+                    '<strong>' + data[i].name + '</strong><br>' +
+                    '주소: ' + data[i].address + '<br>' +
+                    '휘발유: ' + data[i].gasoline + '<br>' +
+                    '경유: ' + data[i].diesel + '<br>' +
+                    '</div>';
+                var infowindow = new kakao.maps.InfoWindow({
+                    content: infowindowContent
+                });
+
+                // 인포윈도우의 Z 인덱스를 마커보다 크게 설정하여 마커 위에 표시될 수 있도록 합니다.
+                infowindow.setZIndex(1);
+
+                // 마커에 마우스 이벤트를 등록하여 인포윈도우를 표시합니다.
+                kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+                kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+
+                marker.setMap(map);
+
+                // 가장 낮은 휘발유 가격을 가진 마커에 대한 인포윈도우를 페이지 로딩 후에 자동으로 엽니다.
+                if (i === lowestGasolineIndex) {
+                    infowindow.open(map, marker);
+                }
+            }
+        });
+    });
+
+    // 휘발유 가격이 가장 낮은 마커의 인덱스를 찾는 함수
+    function findLowestGasolineIndex(data) {
+        var lowestGasolineIndex = 0;
+        var lowestGasoline = data[0].gasoline;
+
+        for (var i = 1; i < data.length; i++) {
+            if (data[i].gasoline < lowestGasoline) {
+                lowestGasoline = data[i].gasoline;
+                lowestGasolineIndex = i;
+            }
+        }
+
+        return lowestGasolineIndex;
     }
-}
 
-// 지도에 마커를 표시하는 함수입니다
-function displayMarker(place) {
+    // 마커에 마우스를 올렸을 때 인포윈도우를 열도록 이벤트 리스너를 생성하는 함수
+    function makeOverListener(map, marker, infowindow) {
+        return function() {
+            infowindow.open(map, marker);
+        };
+    }
 
-    // 마커를 생성하고 지도에 표시합니다
-    var marker = new kakao.maps.Marker({
-        map: map,
-        position: new kakao.maps.LatLng(place.y, place.x)
-    });
-
-    // 마커에 클릭이벤트를 등록합니다
-    kakao.maps.event.addListener(marker, 'click', function() {
-        // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
-        infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.place_name + '</div>');
-        infowindow.open(map, marker);
-    });
-}
+    // 마커에서 마우스를 치웠을 때 인포윈도우를 닫도록 이벤트 리스너를 생성하는 함수
+    function makeOutListener(infowindow) {
+        return function() {
+            infowindow.close();
+        };
+    }
 </script>
 </body>
 </html>

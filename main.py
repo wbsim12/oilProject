@@ -19,6 +19,9 @@ from PyQt5.QtCore import Qt, QTimer, QUrl
 from oil_price_stat import *
 from avg_recent_price import avg_price
 from kakao_map_test import kakao_map_set
+import plotly.io as pio
+from by_location_visualization import plot_interactive_graph
+
 
 #import kakao_map_test
 from oil_price_stat import *
@@ -63,8 +66,15 @@ class MainDialog(QMainWindow, MainUI):
             self.main_cover_btn_3.clicked.connect(self.get_main)
             self.name_label_1.setText('전국평균\n(원/리터)')
             self.name_label_2.setText('성남평균\n(원/리터)')
-            self.value_label_1.setText('휘발유: {:.2f} ({:+.2f})\n경유: {:.2f} ({:+.2f})'.format(all_check1, all_check2,all_check3, all_check4))
-            self.value_label_2.setText('휘발유: {:.2f} ({:+.2f})\n경유: {:.2f} ({:+.2f})'.format(local_check1, local_check2,local_check3, local_check4))
+            self.value_label_1.setText('휘발유: {:.2f} ({:+.2f})\n경   유: {:.2f} ({:+.2f})'.format(all_check1, all_check2,all_check3, all_check4))
+            self.value_label_2.setText('휘발유: {:.2f} ({:+.2f})\n경   유: {:.2f} ({:+.2f})'.format(local_check1, local_check2,local_check3, local_check4))
+            self.lineEdit.returnPressed.connect(self.enter_event)
+            self.search_btn.clicked.connect(self.enter_event)
+            self.button_gasoline.hide()
+            self.button_diesel.hide()
+            self.button_both.hide()
+            self.button_change.clicked.connect(self.change_button)
+
 
             try:
                 self.price_chart = StatPageUI()
@@ -74,6 +84,32 @@ class MainDialog(QMainWindow, MainUI):
                 print(e)
                 print(traceback.format_exc())
 
+        except Exception as e:
+            print(e)
+            print(traceback.format_exc())
+
+    def change_button(self):
+
+        try:
+
+            fig = plot_interactive_graph()
+            html = pio.to_html(fig, include_plotlyjs='cdn')
+            self.web_price_view.setHtml(html)
+        except Exception as e:
+            print(e)
+            print(traceback.format_exc())
+
+    def enter_event(self):
+        try:
+            search_txt = self.lineEdit.text()
+
+            # url = "http://localhost:8000/"
+            # self.web_view.load(QUrl(url))
+            # script = f"transferData('{search_txt}')"
+            # self.web_view.page().runJavaScript(script)
+            self.tabWidget.setCurrentIndex(1)
+            # self.web_view.setUrl(QUrl.fromLocalFile("./html/index.html"))
+            # print(search_txt)
         except Exception as e:
             print(e)
             print(traceback.format_exc())
@@ -95,12 +131,15 @@ class MainDialog(QMainWindow, MainUI):
             print(e)
             print(traceback.format_exc())
 
-
     def move_page(self):
         try:
             km = kakao_map_set
-
-            url = km.set_url(self)
+            #km.oil_price_search(self)
+            km.read_xls_to_csv(self)
+            km.read_csv_rename_df(self)
+            km.read_csv_add_xy(self)
+            km.read_csv_to_json(self)
+            url = 'http://localhost:8000/kao_index.html'
             print(url)
             self.web_view.load(QUrl(url))
             self.tabWidget.setCurrentIndex(1)
