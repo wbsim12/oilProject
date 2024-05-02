@@ -87,7 +87,7 @@ class StatPageUI(QMainWindow, stat_UI):
         self.vbox = self.findChild(QVBoxLayout, 'Graph')
         self.setup_custom_ui()
 
-        # CrawlOpiNet()  # 크롤링: 바로 가져오지 않고 크롤링 후 저장한 것을 가져오는 것만으로 괜찮을까? 스레드 사용하여 호출
+        CrawlOpiNet()  # 크롤링: 바로 가져오지 않고 크롤링 후 저장한 것을 가져오는 것만으로 괜찮을까? 스레드 사용하여 호출
 
         dataset = None
         # 임시 데이터: UI 초기화 시 데이터를 가져온다?
