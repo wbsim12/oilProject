@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>587</width>
-    <height>748</height>
+    <height>738</height>
    </rect>
   </property>
   <property name="font">
@@ -853,7 +853,7 @@ color: rgb(0, 0, 0);</string>
         <x>0</x>
         <y>80</y>
         <width>581</width>
-        <height>591</height>
+        <height>565</height>
        </rect>
       </property>
       <property name="url">
@@ -933,10 +933,82 @@ color: rgb(0, 0, 0);</string>
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
+     <widget class="QPushButton" name="button_change">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>650</y>
+        <width>211</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);
+border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string>전국/지역별 유가평균 보기</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_diesel">
+      <property name="geometry">
+       <rect>
+        <x>86</x>
+        <y>650</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);
+border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string>경유</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_both">
+      <property name="geometry">
+       <rect>
+        <x>166</x>
+        <y>650</y>
+        <width>81</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);
+border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string>휘발유+경유</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_gasoline">
+      <property name="geometry">
+       <rect>
+        <x>6</x>
+        <y>650</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 94, 150);
+border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string>휘발유</string>
+      </property>
+     </widget>
      <zorder>web_price_view</zorder>
      <zorder>main_cover_btn_3</zorder>
      <zorder>label_15</zorder>
      <zorder>logo1_btn_5</zorder>
+     <zorder>button_change</zorder>
+     <zorder>button_diesel</zorder>
+     <zorder>button_both</zorder>
+     <zorder>button_gasoline</zorder>
     </widget>
     <widget class="QWidget" name="tab_5">
      <attribute name="title">

@@ -38,7 +38,7 @@ class avg_price():
             fig.add_trace(go.Scatter(x=dates, y=gasoline_prices, mode='lines+markers', name='휘발유', marker=dict(color='red')))
 
                 # 그래프 레이아웃 설정
-            fig.update_layout(title='전국 평균 유가', xaxis_title='날짜', yaxis_title='가격 (원)')
+            fig.update_layout(title='전국 평균 유가(일자별)', xaxis_title='날짜', yaxis_title='가격 (원)')
 
             fig.update_layout(xaxis=dict(rangeslider_visible=True))
 
